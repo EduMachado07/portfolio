@@ -120,3 +120,19 @@
     @apply bg-background text-foreground;
   }
 }
+
+.font-supreme {
+  font-family: "Supreme", sans-serif;
+}
+.font-supreme-bold {
+  font-family: "Supreme", sans-serif;
+  font-weight: 700;
+}
+.font-chubbo {
+  font-family: "Chubbo", sans-serif;
+  font-weight: 500;
+}
+.font-chubbo-bold {
+  font-family: "Chubbo", sans-serif;
+  font-weight: 700;
+}

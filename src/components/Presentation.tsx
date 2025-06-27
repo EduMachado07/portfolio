@@ -7,18 +7,22 @@ import { Contacts } from "@/lib/contacts";
 const Presentation = () => {
   return (
     <section className="flex dark:bg-[#222] rounded-lg overflow-hidden shadow-lg dark:shadow-zinc-900">
-      <section className="w-2/6">
-        <img src={imgPerfil} alt="img perfil" />
-      </section>
+      <div className="w-2/6 h-full">
+        <img
+          src={imgPerfil}
+          alt="img perfil"
+          className="w-full h-full object-cover"
+        />
+      </div>
       <section className="w-4/6 p-8 flex flex-col gap-4">
         {/* ABOUT ME */}
-        <p className="text-[#0D7DFF] font-semibold text-lg">
+        <p className="text-zinc-50 font-chubbo text-lg">
           Olá, meu nome é Eduardo Machado!
         </p>
-        <h1 className="text-[#0D7DFF] font-bold text-3xl">
+        <h1 className="text-[#3399FF] font-chubbo-bold text-3xl">
           Desenvolvedor Full Stack Apaixonado Pela Tecnologia
         </h1>
-        <p className="dark:text-zinc-50 text-pretty">
+        <p className="dark:text-zinc-200 font-supreme">
           Tenho 18 anos e sou um Desenvolvedor Full Stack movido pela paixão por
           tecnologia e pela forma como ela transforma e facilita o dia a dia das
           pessoas. Gosto de criar projetos com foco em experiências de usuário
@@ -36,7 +40,7 @@ const Presentation = () => {
 
         {/* CONTACTS */}
         <section className="flex flex-col gap-4">
-          <h1 className="text-zinc-50 font-semibold">Contato</h1>
+          <h1 className="text-zinc-50 font-chubbo">Contato</h1>
           <section className="flex gap-8 justify-between py-1 px-4">
             {Contacts.map((item, index) => {
               const Icon = item.icon;
@@ -47,9 +51,9 @@ const Presentation = () => {
                 >
                   <div className="flex items-end gap-2">
                     <Icon />
-                    <p className="font-semibold">{item.title}</p>
+                    <p className="font-semibold font-supreme">{item.title}</p>
                   </div>
-                  <a className="text-zinc-300">{item.label}</a>
+                  <a className="text-zinc-300 font-supreme">{item.label}</a>
                 </div>
               );
             })}
@@ -60,7 +64,7 @@ const Presentation = () => {
         <section className="flex gap-20">
           {Object.entries(SocialMedia).map(([category, items]) => (
             <div key={category} className="flex flex-col gap-4">
-              <h1 className="text-zinc-50 font-semibold">{category}</h1>
+              <h1 className="text-zinc-50 font-semibold font-chubbo">{category}</h1>
               <section className="flex gap-8">
                 {items.map((item, index) => {
                   const Icon = item.icon;
@@ -72,7 +76,7 @@ const Presentation = () => {
                       className="flex items-center gap-2 text-zinc-50 border-2 rounded-lg py-2.5 px-4 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md hover:shadow-zinc-800"
                     >
                       <Icon size={20} />
-                      <p className="font-semibold text-sm">{item.title}</p>
+                      <p className="font-semibold text-sm font-supreme">{item.title}</p>
                     </Button>
                   );
                 })}

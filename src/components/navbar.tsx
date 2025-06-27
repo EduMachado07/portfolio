@@ -26,7 +26,7 @@ const links: ILinks[] = [
 
 const Navbar = () => {
     return (
-        <nav className="flex items-center justify-between py-6 text-lg font-medium">
+        <nav className="flex items-center justify-between py-6 text-lg font-medium font-supreme">
             <Link to='/' className="flex items-center gap-2 dark:hover:text-zinc-50 dark:text-zinc-400">
                 <ChevronLeft />
                 Home

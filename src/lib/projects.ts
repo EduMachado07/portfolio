@@ -1,3 +1,5 @@
+import img_finX from '@/assets/img_FinX.png'
+
 interface IProjects {
   img: string;
   title: string;
@@ -21,7 +23,7 @@ interface IProjects {
 
 export const Projects: IProjects[] = [
   {
-    img: "",
+    img: img_finX,
     title: "Fin X",
     description: "descrição do projeto...",
     linkProject: "/",
