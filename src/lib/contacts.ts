@@ -1,14 +1,9 @@
 import type { ElementType } from "react";
 import {
-    // ArrowRight,
-    File,
-    Github,
-    Instagram,
-    Linkedin,
-    Mail,
-    MapPin,
-    Smartphone,
-  } from "lucide-react";
+  Mail,
+  MapPin,
+  Smartphone,
+} from "lucide-react";
 
 interface IContact {
   title: string;

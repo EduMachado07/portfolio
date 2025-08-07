@@ -1,41 +1,36 @@
-import { ChevronLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+// import { ChevronLeft } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 interface ILinks {
     name: string,
     to: string
 }
 const links: ILinks[] = [
-    {
-        name: 'Projetos',
-        to: '/',
-    },
-    {
-        name: 'Sobre mim',
-        to: '/',
-    },
-    // {
-    //     name: 'Artigos',
-    //     to: '/',
-    // },
-    {
-        name: 'Contato',
-        to: '/',
-    },
+    { name: 'Home', to: '/home', },
+    { name: 'Projetos', to: '/projects', },
+    { name: 'Sobre mim', to: '/about', },
+    // { name: 'Artigos', to: '/article', },
+    { name: 'Contato', to: '/contact', },
 ]
 
 const Navbar = () => {
+    const location = useLocation();
+
     return (
-        <nav className="flex items-center justify-between py-6 text-lg font-medium font-supreme">
-            <Link to='/' className="flex items-center gap-2 dark:hover:text-zinc-50 dark:text-zinc-400">
-                <ChevronLeft />
-                Home
-            </Link>
-            {/* <div className="size-12"><img src={logo} alt="" /></div> */}
+        <nav className="flex items-center justify-end px-[12vw] py-6 text-lg font-medium font-supreme">
             <ul className="flex gap-8">
-                {links.map((item, index) => (
-                    <Link key={index} to={item.to} className='dark:hover:text-zinc-50 dark:text-zinc-400 transition-transform duration-200 hover:-translate-y-1'>{item.name}</Link>
-                ))}
+                {links.map((item, index) => {
+                    const isActive = location.pathname.startsWith(item.to);
+
+                    return (
+                        <Link
+                            key={index}
+                            to={item.to}
+                            className={`transition-transform duration-200 hover:-translate-y-1 ${isActive ? 'dark:text-zinc-50 font-supreme-bold' : 'dark:hover:text-zinc-50 dark:text-zinc-400'}`}>
+                            {item.name}
+                        </Link>
+                    )
+                })}
             </ul>
         </nav>
     )

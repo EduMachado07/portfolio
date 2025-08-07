@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 
 interface CardDetailsProps {
   title: string;
   description: string;
   linkProject: string;
+  year: number;
   type: string[];
 }
 
@@ -14,36 +15,46 @@ const CardDetails = ({
   description,
   linkProject,
   type,
+  year
 }: CardDetailsProps) => {
   return (
-    <div className="flex flex-col gap-2 p-4">
-      <section className="flex gap-2 flex-wrap">
-        {/* type project */}
-        {type.map((tag, index) => (
-          <div
-            key={index}
-            className="dark:text-zinc-50 rounded-sm border-2 px-2 py-0.5 text-sm font-supreme"
-          >
-            #{tag}
-          </div>
-        ))}
+    <section className="flex flex-col justify-between gap-2 p-4">
+      <section className="h-max flex flex-col gap-2">
+        <h1 className="text-[#3399FF] font-chubbo-bold text-2xl line-clamp-1">{title}</h1> {/* title */}
+        <div className="flex gap-2">
+          {type.slice(0, 4).map((tag, index) => (
+            <div
+              key={index}
+              className="dark:text-zinc-50 dark:border-zinc-50 rounded-sm border-2 px-2 py-0.5 text-sm font-supreme"
+            >
+              {tag}
+            </div>
+          ))}
+
+          {type.length > 4 && (
+            <div className="text-lg dark:text-zinc-50 flex items-end">...</div>
+          )}
+        </div>
+        <p className="dark:text-zinc-200 font-supreme line-clamp-3">{description}</p> {/* description */}
       </section>
-      <h1 className="text-[#3399FF] font-chubbo-bold text-2xl">{title}</h1> {/* title */}
-      <p className="dark:text-white font-supreme">{description}</p> {/* description */}
       {/* link page project */}
-      <div className="text-right">
+      <section className="flex items-end justify-between">
+        <div
+          className="flex gap-1.5 items-center dark:text-zinc-50 rounded-sm text-base font-supreme"
+        >
+          <Calendar size={22} />
+          {year}
+        </div>
         <Link to={linkProject}>
-          <Button
-            size="sm"
+          <Button size="sm"
             variant="link"
-            className="font-chubbo text-base group relative overflow-hidden gap-2"
-          >
-            Ver projeto
-            <ArrowRight className="transition-transform duration-200 transform opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0" />
+            className="group relative overflow-hidden gap-2">
+            Saber mais
+            <ArrowRight className="transition-transform duration-200 transform -translate-x-0.5 group-hover:translate-x-0.5" />
           </Button>
         </Link>
-      </div>
-    </div>
+      </section>
+    </section>
   );
 };
 
