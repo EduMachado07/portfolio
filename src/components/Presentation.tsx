@@ -24,7 +24,7 @@ const Presentation = () => {
   };
 
   return (
-    <section className="flex gap-6 dark:bg-[#222] rounded-lg overflow-hidden shadow-lg dark:shadow-zinc-900 p-8">
+    <section className="flex max-md:flex-col gap-6 dark:bg-[#222] rounded-lg overflow-hidden shadow-lg dark:shadow-zinc-900 p-8">
       {/* IMG PROFILE */}
       <div className="w-2/6 h-full p-4 border-4 dark:border-zinc-400 rounded-full">
         <img
@@ -33,8 +33,8 @@ const Presentation = () => {
           className="w-full h-full object-cover rounded-full shadow-xl"
         />
       </div>
+      {/* ABOUT ME */}
       <section className="w-4/6 flex flex-col gap-4">
-        {/* ABOUT ME */}
         <p className="dark:text-zinc-50 font-chubbo text-lg">
           Olá, meu nome é Eduardo Machado!
         </p>

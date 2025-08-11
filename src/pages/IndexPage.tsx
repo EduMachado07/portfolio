@@ -42,34 +42,34 @@ const Skills: Skill[] = [
 
 const IndexPage = () => {
     return (
-        <main className="flex-1 flex flex-col gap-10 pb-12 px-[12vw]">
+        <main className="flex-1 flex flex-col gap-10 pb-12 px-[4vw] md:px-[12vw]">
             {/* PRESENTATION */}
             <Presentation />
 
             {/* SKILLS */}
             <div className="flex justify-between -mb-4">
-                <h1 className="text-[#3399FF] font-chubbo-bold text-2xl">Mais Utilizados</h1>
+                <h1 className="text-[#3399FF] font-chubbo-bold text-2xl">Principais Tecnologias</h1>
 
-                <Link to='/about'>
+                <Link to='/about' className="">
                     <Button size={'default'} variant={"link"} className="group">
                         Ver todas
                         <ArrowRight className="transition-transform duration-200 transform -translate-x-1 group-hover:translate-x-1" />
                     </Button>
                 </Link>
             </div>
-            <section className="flex justify-center gap-12">
+            <section className="flex md:justify-center justify-start md:gap-12 gap-4 overflow-x-auto flex-nowrap">
                 {
                     Skills.map((tech, index) => {
                         const Icon = tech.icon;
                         return (
-                            <section className="flex flex-col gap-4 items-center w-28">
+                            <section className="flex flex-col gap-2 items-center md:w-28 w-22 flex-shrink-0 mb-3">
                                 <div
                                     key={index}
-                                    className="dark:bg-[#222] shadow-sm dark:shadow-zinc-900 w-22 h-28 rounded-full flex justify-center items-center gap-3 hover:scale-110 transition-transform duration-200 cursor-pointer"
+                                    className="dark:bg-[#222] shadow-sm dark:shadow-zinc-900 md:w-20 w-14 md:h-24 h-18 rounded-full flex justify-center items-center gap-3 hover:scale-110 transition-transform duration-200 cursor-pointer"
                                 >
-                                    <Icon size={46} />
+                                    <Icon size={28} className="md:size-[40px]" />
                                 </div>
-                                <p className="text-lg font-supreme-bold">
+                                <p className="text-sm md:text-lg font-supreme-bold">
                                     {tech.title}
                                 </p>
                             </section>
