@@ -42,18 +42,21 @@ const Skills: Skill[] = [
 
 const IndexPage = () => {
     return (
-        <main className="flex-1 flex flex-col gap-10 pb-12 px-[4vw] md:px-[12vw]">
+        <main className="flex-1 flex flex-col md:gap-10 gap-8 px-[4vw] md:px-[12vw]">
             {/* PRESENTATION */}
             <Presentation />
 
             {/* SKILLS */}
-            <div className="flex justify-between -mb-4">
-                <h1 className="text-[#3399FF] font-chubbo-bold text-2xl">Principais Tecnologias</h1>
+            <div className="flex justify-between -mb-6">
+                <h1 className="text-[#3399FF] font-chubbo-bold md:text-2xl text-xl">Principais Tecnologias</h1>
 
                 <Link to='/about' className="">
-                    <Button size={'default'} variant={"link"} className="group">
+                    <Button size={'default'} variant={"link"} className="group max-md:hidden">
                         Ver todas
                         <ArrowRight className="transition-transform duration-200 transform -translate-x-1 group-hover:translate-x-1" />
+                    </Button>
+                    <Button size={'default'} variant={"link"} className="md:hidden">
+                        <ArrowRight />
                     </Button>
                 </Link>
             </div>
@@ -79,17 +82,20 @@ const IndexPage = () => {
             </section>
 
             {/* PROJECTS */}
-            <div className="flex justify-between -mb-4">
-                <h1 className="text-[#3399FF] font-chubbo-bold text-2xl">Melhores Projetos</h1>
+            <div className="flex justify-between -mb-6">
+                <h1 className="text-[#3399FF] font-chubbo-bold md:text-2xl text-xl">Melhores Projetos</h1>
 
                 <Link to='/projects'>
-                    <Button size={'default'} variant={"link"} className="group">
+                    <Button size={'default'} variant={"link"} className="group max-md:hidden">
                         Ver todos
                         <ArrowRight className="transition-transform duration-200 transform -translate-x-1 group-hover:translate-x-1" />
                     </Button>
+                    <Button size={'default'} variant={"link"} className="md:hidden">
+                        <ArrowRight />
+                    </Button>
                 </Link>
             </div>
-            <section className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <section className="grid grid-cols-1 md:grid-cols-3 md:gap-8 gap-4">
                 {Projects.slice(0, 3).map((item, index) => (
                     <Card.Root key={index}>
                         <Card.Image linkProject={item.linkProject} img={item.img} />
@@ -105,7 +111,7 @@ const IndexPage = () => {
             </section>
 
             {/* CONTACT */}
-            <h1 className="text-[#3399FF] font-chubbo-bold text-2xl -mb-4">Fale Comigo</h1>
+            <h1 className="text-[#3399FF] font-chubbo-bold md:text-2xl text-xl -mb-6">Fale Comigo</h1>
             <Contact />
         </main>
     );

@@ -24,9 +24,9 @@ const Presentation = () => {
   };
 
   return (
-    <section className="flex max-md:flex-col gap-6 dark:bg-[#222] rounded-lg overflow-hidden shadow-lg dark:shadow-zinc-900 p-8">
+    <section className="flex max-md:flex-col max-md:items-center gap-6 dark:bg-[#222] rounded-lg overflow-hidden shadow-lg dark:shadow-zinc-900 md:p-8 p-4">
       {/* IMG PROFILE */}
-      <div className="w-2/6 h-full p-4 border-4 dark:border-zinc-400 rounded-full">
+      <div className=" md:w-2/6 w-7/10 h-full p-4 border-4 dark:border-zinc-400 rounded-full">
         <img
           src={imgPerfil}
           alt="img perfil"
@@ -34,14 +34,14 @@ const Presentation = () => {
         />
       </div>
       {/* ABOUT ME */}
-      <section className="w-4/6 flex flex-col gap-4">
-        <p className="dark:text-zinc-50 font-chubbo text-lg">
+      <section className="md:w-4/6 w-full flex flex-col md:gap-4 gap-2">
+        <p className="dark:text-zinc-50 font-chubbo text-base">
           Olá, meu nome é Eduardo Machado!
         </p>
-        <h1 className="text-[#3399FF] font-chubbo-bold text-3xl">
+        <h1 className="text-[#3399FF] font-chubbo-bold md:text-3xl text-2xl text-pretty">
           Desenvolvedor Full Stack Apaixonado Pela Tecnologia
         </h1>
-        <p className="dark:text-zinc-200 font-supreme">
+        <p className="dark:text-zinc-200 font-supreme text-pretty">
           Tenho {calcularIdade('2007-01-22')} anos e sou um Desenvolvedor Full Stack apaixonado por tecnologia e pelo seu impacto na vida das pessoas. Gosto de criar projetos com foco em experiências de usuário
           dinâmicas, com interfaces limpas, modernas e funcionais. Desde o
           primeiro contato com o JavaScript, me encantei pela linguagem e venho
@@ -56,19 +56,19 @@ const Presentation = () => {
         <hr />
 
         {/* CONTACTS */}
-        <section className="flex flex-col gap-4">
+        <section className="flex flex-col md:gap-4 gap-2">
           <h1 className="dark:text-zinc-50 font-chubbo">Contato</h1>
-          <section className="flex gap-8 justify-between py-1 px-4">
+          <section className="flex max-md:flex-col md:gap-8 gap-4 justify-between py-1 md:px-4 px-2">
             {Contacts.map((item, index) => {
               const Icon = item.icon;
               return (
                 <div
                   key={index}
-                  className="flex flex-col gap-1.5 dark:text-zinc-50 basis-1/3"
+                  className="flex flex-col md:gap-1.5 gap-0.5 dark:text-zinc-50 basis-1/3"
                 >
                   <div className="flex items-end gap-2">
-                    <Icon />
-                    <p className="font-semibold font-supreme">{item.title}</p>
+                    <Icon className='w-[22px]' />
+                    <p className="font-semibold font-supreme max-md:text-sm">{item.title}</p>
                   </div>
                   <a className="dark:text-zinc-300 font-supreme">{item.label}</a>
                 </div>
@@ -80,9 +80,9 @@ const Presentation = () => {
         {/* SOCIAL MEDIA and CURRICULUM */}
         <section className="flex gap-20">
           {Object.entries(SocialMedia).map(([category, items]) => (
-            <div key={category} className="flex flex-col gap-4">
+            <div key={category} className="flex flex-col md:gap-4 gap-2">
               <h1 className="dark:text-zinc-50 font-semibold font-chubbo">{category}</h1>
-              <section className="flex gap-8">
+              <section className="flex md:gap-8 gap-3">
                 {items.map((item, index) => {
                   const Icon = item.icon;
                   return (
@@ -94,7 +94,7 @@ const Presentation = () => {
                         className="flex items-center gap-2 dark:text-zinc-50 border-2 dark:border-zinc-400 rounded-md py-2.5 px-4 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md hover:shadow-zinc-800"
                       >
                         <Icon size={20} />
-                        <p className="font-semibold text-sm font-supreme">{item.title}</p>
+                        <p className="font-semibold text-sm font-supreme max-md:hidden">{item.title}</p>
                       </Button>
                     </a>
                   );

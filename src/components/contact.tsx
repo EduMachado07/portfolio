@@ -81,8 +81,8 @@ const Contact = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit(sendEmail)} className="flex flex-col gap-6">
-            <p className="dark:text-zinc-50 text-lg font-supreme">
+        <form onSubmit={handleSubmit(sendEmail)} className="flex flex-col md:gap-6 gap-5">
+            <p className="dark:text-zinc-50 md:text-lg text-base font-supreme text-pretty">
                 Deseja trabalhar comigo ou tem uma ideia para ser desenvolvida? Entre em contato. <span className="font-supreme-bold text-[#3399FF] underline underline-offset-4">Vamos construir algo juntos!</span>
             </p>
             {(errors.name || errors.email || errors.subject || errors.message) && (
@@ -90,7 +90,7 @@ const Contact = () => {
                     Por favor, preencha todos os campos antes de enviar.
                 </p>
             )}
-            <section className="w-full justify-center flex gap-8">
+            <section className="w-full justify-center flex max-md:flex-col md:gap-8 gap-5">
                 <div className="w-full flex flex-col gap-3">
                     <Label htmlFor="name">Nome</Label>
                     <Input type="text" id="name" placeholder="Seu nome" {...register("name", { required: true })} />
@@ -113,7 +113,7 @@ const Contact = () => {
                     {...register("message", { required: true })}
                 />
             </div>
-            <Button size="lg" className="w-50" type="submit" disabled={status === "loading"}>
+            <Button size="lg" className="md:w-50" type="submit" disabled={status === "loading"}>
                 {renderButtonContent()}
             </Button>
         </form>

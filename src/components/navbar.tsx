@@ -17,8 +17,8 @@ const Navbar = () => {
     const location = useLocation();
 
     return (
-        <nav className="flex items-center justify-end px-[12vw] py-6 text-lg font-medium font-supreme">
-            <ul className="flex gap-8">
+        <nav className="flex items-center justify-end px-[4vw] md:px-[12vw] py-6 md:text-lg text-base font-medium font-supreme">
+            <ul className="flex md:gap-8 gap-4">
                 {links.map((item, index) => {
                     const isActive = location.pathname.startsWith(item.to);
 
