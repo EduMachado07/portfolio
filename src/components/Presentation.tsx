@@ -24,7 +24,7 @@ const Presentation = () => {
   };
 
   return (
-    <section className="flex max-md:flex-col max-md:items-center gap-6 dark:bg-[#222] rounded-lg overflow-hidden shadow-lg dark:shadow-zinc-900 md:p-8 p-4">
+    <section className="flex max-md:flex-col max-md:items-center gap-6 dark:bg-[#222] bg-[#f1f1f1] rounded-lg overflow-hidden shadow-lg dark:shadow-zinc-900 md:p-8 p-4">
       {/* IMG PROFILE */}
       <div className=" md:w-2/6 w-7/10 h-full p-4 border-4 dark:border-zinc-400 rounded-full">
         <img
