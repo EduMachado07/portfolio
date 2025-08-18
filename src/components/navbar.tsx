@@ -26,7 +26,7 @@ const Navbar = () => {
                         <Link
                             key={index}
                             to={item.to}
-                            className={`transition-transform duration-200 hover:-translate-y-1 ${isActive ? 'dark:text-zinc-50 font-supreme-bold' : 'dark:hover:text-zinc-50 dark:text-zinc-400'}`}>
+                            className={`transition-transform duration-200 hover:-translate-y-1 ${isActive ? 'dark:text-zinc-50 text-zinc-900 font-supreme-bold' : 'text-zinc-900 dark:hover:text-zinc-50 dark:text-zinc-400'}`}>
                             {item.name}
                         </Link>
                     )

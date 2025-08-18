@@ -24,9 +24,9 @@ const Presentation = () => {
   };
 
   return (
-    <section className="flex max-md:flex-col max-md:items-center gap-6 dark:bg-[#222] bg-[#f1f1f1] rounded-lg overflow-hidden shadow-lg dark:shadow-zinc-900 md:p-8 p-4">
+    <section className="flex max-md:flex-col max-md:items-center gap-6 dark:bg-[#222] bg-[#fafafa] rounded-lg overflow-hidden shadow-lg shadow-zinc-200 dark:shadow-zinc-900 md:p-8 p-4">
       {/* IMG PROFILE */}
-      <div className=" md:w-2/6 w-7/10 h-full p-4 border-4 dark:border-zinc-400 rounded-full">
+      <div className=" md:w-2/6 w-7/10 h-full p-4 border-4 border-zinc-600 dark:border-zinc-400 rounded-full">
         <img
           src={imgPerfil}
           alt="img perfil"
@@ -38,10 +38,10 @@ const Presentation = () => {
         <p className="dark:text-zinc-50 font-chubbo text-base">
           Olá, meu nome é Eduardo Machado!
         </p>
-        <h1 className="text-[#3399FF] font-chubbo-bold md:text-3xl text-2xl text-pretty">
+        <h1 className="dark:text-[#3399FF] text-[#226EBA] font-chubbo-bold md:text-3xl text-2xl text-pretty">
           Desenvolvedor Full Stack Apaixonado Pela Tecnologia
         </h1>
-        <p className="dark:text-zinc-200 font-supreme text-pretty">
+        <p className="text-zinc-700 dark:text-zinc-200 md:text-base font-supreme text-pretty">
           Tenho {calcularIdade('2007-01-22')} anos e sou um Desenvolvedor Full Stack apaixonado por tecnologia e pelo seu impacto na vida das pessoas. Gosto de criar projetos com foco em experiências de usuário
           dinâmicas, com interfaces limpas, modernas e funcionais. Desde o
           primeiro contato com o JavaScript, me encantei pela linguagem e venho
@@ -51,26 +51,26 @@ const Presentation = () => {
           <br />
           Atualmente, estou em busca da minha primeira oportunidade profissional
           na área, onde eu possa aplicar meus conhecimentos, aprender com novos
-          desafios e contribuir com projetos de impacto. {isActive ? <Link to='/about' className="underline underline-offset-2 font-supreme-bold">Saber mais</Link> : ''}
+          desafios e contribuir com projetos de impacto. <Link to='/about' className="underline underline-offset-2 font-supreme-bold">Saber mais</Link>
         </p>
         <hr />
 
         {/* CONTACTS */}
         <section className="flex flex-col md:gap-4 gap-2">
-          <h1 className="dark:text-zinc-50 font-chubbo">Contato</h1>
+          <h1 className="text-zinc-900 dark:text-zinc-50 font-chubbo">Contato</h1>
           <section className="flex max-md:flex-col md:gap-8 gap-4 justify-between py-1 md:px-4 px-2">
             {Contacts.map((item, index) => {
               const Icon = item.icon;
               return (
                 <div
                   key={index}
-                  className="flex flex-col md:gap-1.5 gap-0.5 dark:text-zinc-50 basis-1/3"
+                  className="flex flex-col md:gap-1.5 gap-0.5 basis-1/3"
                 >
-                  <div className="flex items-end gap-2">
+                  <div className="flex items-end gap-2 text-zinc-900 dark:text-zinc-50">
                     <Icon className='w-[22px]' />
                     <p className="font-semibold font-supreme max-md:text-sm">{item.title}</p>
                   </div>
-                  <a className="dark:text-zinc-300 font-supreme">{item.label}</a>
+                  <a className="text-zinc-700 dark:text-zinc-300 font-supreme">{item.label}</a>
                 </div>
               );
             })}
@@ -81,7 +81,7 @@ const Presentation = () => {
         <section className="flex gap-20">
           {Object.entries(SocialMedia).map(([category, items]) => (
             <div key={category} className="flex flex-col md:gap-4 gap-2">
-              <h1 className="dark:text-zinc-50 font-semibold font-chubbo">{category}</h1>
+              <h1 className="text-zinc-900 dark:text-zinc-50 font-semibold font-chubbo">{category}</h1>
               <section className="flex md:gap-8 gap-3">
                 {items.map((item, index) => {
                   const Icon = item.icon;
@@ -91,7 +91,7 @@ const Presentation = () => {
                         key={index}
                         variant="nothing"
                         size="social"
-                        className="flex items-center gap-2 dark:text-zinc-50 border-2 dark:border-zinc-400 rounded-md py-2.5 px-4 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md hover:shadow-zinc-800"
+                        className="flex items-center gap-2 text-zinc-900 dark:text-zinc-50 border-2 border-zinc-600 dark:border-zinc-400 rounded-md py-2.5 px-4 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md hover:shadow-zinc-300 dark:hover:shadow-zinc-700"
                       >
                         <Icon size={20} />
                         <p className="font-semibold text-sm font-supreme max-md:hidden">{item.title}</p>
