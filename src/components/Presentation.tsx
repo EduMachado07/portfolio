@@ -3,13 +3,9 @@ import imgPerfil from "@/assets/perfil.jpg";
 import { SocialMedia } from "@/lib/socialMedia";
 import { Button } from "./ui/button";
 import { Contacts } from "@/lib/contacts";
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Presentation = () => {
-  const location = useLocation();
-
-  const isActive = location.pathname === '/home';
-
   const calcularIdade = (dataNascimento: string) => {
     const hoje = new Date();
     const nascimento = new Date(dataNascimento);
@@ -35,13 +31,13 @@ const Presentation = () => {
       </div>
       {/* ABOUT ME */}
       <section className="md:w-4/6 w-full flex flex-col md:gap-4 gap-2">
-        <p className="dark:text-zinc-50 font-chubbo text-base">
+        <p className="dark:text-zinc-50 text-zinc-800 font-chubbo text-base">
           Olá, meu nome é Eduardo Machado!
         </p>
         <h1 className="dark:text-[#3399FF] text-[#226EBA] font-chubbo-bold md:text-3xl text-2xl text-pretty">
           Desenvolvedor Full Stack Apaixonado Pela Tecnologia
         </h1>
-        <p className="text-zinc-700 dark:text-zinc-200 md:text-base font-supreme text-pretty">
+        <p className="text-zinc-800 dark:text-zinc-200 md:text-base font-supreme text-pretty">
           Tenho {calcularIdade('2007-01-22')} anos e sou um Desenvolvedor Full Stack apaixonado por tecnologia e pelo seu impacto na vida das pessoas. Gosto de criar projetos com foco em experiências de usuário
           dinâmicas, com interfaces limpas, modernas e funcionais. Desde o
           primeiro contato com o JavaScript, me encantei pela linguagem e venho

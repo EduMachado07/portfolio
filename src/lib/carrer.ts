@@ -2,7 +2,7 @@ import img_Fatec from '@/assets/img_Fatec.jpg'
 import img_Etec from '@/assets/img_Etec.jpg'
 import img_Microcamp from '@/assets/img_Microcamp.jpg'
 import type { ElementType } from 'react';
-import { SiReact, SiTypescript, SiJavascript, SiNodedotjs, SiPostgresql, SiMysql, SiPhp, SiHtml5, SiCss3, SiTailwindcss, SiGit, SiBootstrap, SiPrisma, SiJest, SiVite, SiShadcnui, SiFigma } from "react-icons/si";
+import { SiReact, SiTypescript, SiJavascript, SiNodedotjs, SiPostgresql, SiMysql, SiHtml5, SiCss3, SiTailwindcss, SiGit, SiBootstrap, SiPrisma, SiJest, SiVite, SiShadcnui } from "react-icons/si";
 
 interface ISchools {
     img: string,
@@ -137,12 +137,5 @@ export const Technologys: ITechnologys[] = [
         icon: SiGit,
         title: 'Git',
         link: 'https://git-scm.com/'
-    },
-
-    // Ferramentas 
-    {
-        icon: SiFigma,
-        title: 'figma',
-        link: 'https://www.figma.com/pt-br/'
     },
 ];

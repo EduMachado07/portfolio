@@ -18,38 +18,38 @@ const Page = () => {
             {/* ABOUT PROJECT */}
             <section className='px-[4vw] md:px-[12vw] flex flex-col md:gap-8 gap-4' >
                 <ComponentTitle value={Projects[1].title} />
-                <p className="dark:text-zinc-200 md:text-xl text-lg font-supreme md:w-5/6 text-pretty">
+                <p className="dark:text-zinc-50 text-zinc-800 md:text-xl text-lg font-supreme md:w-5/6 text-pretty">
                     {Projects[1].description}
                 </p>
                 <div className='flex max-md:flex-col gap-4 md:w-5/6 justify-between'>
                     {/* PROJECT TYPE */}
-                    <p className="text-zinc-200 font-supreme md:text-lg flex flex-col md:gap-2">
-                        <span className="font-supreme-bold md:text-xl text-lg text-[#3399FF]">Tipo de projeto:</span>
+                    <p className="dark:text-zinc-50 text-zinc-800 font-supreme md:text-lg flex flex-col md:gap-2">
+                        <span className="font-supreme-bold md:text-xl text-lg dark:text-[#3399FF] text-[#226EBA]">Tipo de projeto:</span>
                         {Projects[1].purpose} / {Projects[1].systemType}
                     </p>
                     {/* FOR */}
-                    <p className="text-zinc-200 font-supreme md:text-lg flex flex-col md:gap-2.5 gap-1">
-                        <span className="font-supreme-bold md:text-xl text-lg text-[#3399FF]">Para:</span>
+                    <p className="dark:text-zinc-50 text-zinc-800 font-supreme md:text-lg flex flex-col md:gap-2.5 gap-1">
+                        <span className="font-supreme-bold md:text-xl text-lg dark:text-[#3399FF] text-[#226EBA]">Para:</span>
                         <a href='https://github.com/EduMachado07/FinX' target='_blank' className='flex items-center gap-1.5'><Smartphone size={20} />App Mobile</a>
                     </p>
                     {/* CATEGORY */}
-                    <p className="text-zinc-200 font-supreme md:text-lg flex flex-col md:gap-2">
-                        <span className="font-supreme-bold md:text-xl text-lg text-[#3399FF]">Categoria:</span>
+                    <p className="dark:text-zinc-50 text-zinc-800 font-supreme md:text-lg flex flex-col md:gap-2">
+                        <span className="font-supreme-bold md:text-xl text-lg dark:text-[#3399FF] text-[#226EBA]">Categoria:</span>
                         Hackathon Acadêmico
                     </p>
                     {/* TECHNOLOGYS */}
-                    <p className="text-zinc-200 w-70 font-supreme md:text-lg flex flex-col md:gap-2">
-                        <span className="font-supreme-bold md:text-xl text-lg text-[#3399FF]">Tecnologias utilizadas:</span>
+                    <p className="dark:text-zinc-50 text-zinc-800 w-70 font-supreme md:text-lg flex flex-col md:gap-2">
+                        <span className="font-supreme-bold md:text-xl text-lg dark:text-[#3399FF] text-[#226EBA]">Tecnologias utilizadas:</span>
                         JavaScrypt, React Native, Expo
                     </p>
                     {/* LINKS */}
-                    <p className="text-zinc-200 font-supreme md:text-lg flex flex-col md:gap-2.5 gap-1">
-                        <span className="font-supreme-bold md:text-xl text-lg text-[#3399FF]">Links:</span>
+                    <p className="dark:text-zinc-50 text-zinc-800 font-supreme md:text-lg flex flex-col md:gap-2.5 gap-1">
+                        <span className="font-supreme-bold md:text-xl text-lg dark:text-[#3399FF] text-[#226EBA]">Links:</span>
                         <a href={'https://drive.google.com/file/d/1b6FxTJDU-GvtZ0CRqPeFmiGuM87XTGCm/view'} target='_blank' className='underline underline-offset-4 flex items-center gap-1.5'><Download size={20} />Download App</a>
                         <a href={Projects[1].linkGithub} target='_blank' className='underline underline-offset-4 flex items-center gap-1.5'><SquareArrowOutUpRight size={20} />GitHub</a>
                     </p>
                 </div>
-                <p className="text-zinc-200 font-supreme md:text-lg flex flex-col md:gap-3 gap-2 md:w-4/6">
+                <p className="dark:text-zinc-50 text-zinc-800 font-supreme md:text-lg flex flex-col md:gap-3 gap-2 md:w-4/6">
                     <span className="font-chubbo-bold md:text-2xl text-xl text-orange-400/90">Motivo</span>
                     <span>
                         Este projeto foi desenvolvido durante um Hackathon promovido pelos professores da ETEC, com o objetivo de criar uma aplicação mobile para facilitar o acesso a vagas de emprego divulgadas pela instituição.
@@ -68,31 +68,31 @@ const Page = () => {
             </section >
 
             {/* MY ROLE */}
-            <section className='bg-[#222] md:py-12 py-4 px-[4vw] md:px-[12vw] shadow-md dark:shadow-zinc-800 flex flex-col md:gap-4 gap-2'>
-                <h1 className="font-chubbo-bold md:text-3xl text-2xl text-[#3399FF]">Meu Papel</h1>
-                <p className="dark:text-zinc-200 md:text-lg font-supreme md:w-5/6 text-pretty">
+            <section className='dark:bg-[#222] bg-[#fafafa] md:py-12 py-4 px-[4vw] md:px-[12vw] shadow-md dark:shadow-zinc-800 flex flex-col md:gap-4 gap-2'>
+                <h1 className="font-chubbo-bold md:text-3xl text-2xl dark:text-[#3399FF] text-[#226EBA]">Meu Papel</h1>
+                <p className="dark:text-zinc-50 text-zinc-800 md:text-lg font-supreme md:w-5/6 text-pretty">
                     Atuei ativamente no desenvolvimento do aplicativo, sendo responsável por grande parte da codificação. Sugeri e implementei funcionalidades importantes, como o modo claro e escuro e o compartilhamento de vagas, com o objetivo de melhorar a experiência do usuário. Utilizei a plataforma Expo para facilitar o desenvolvimento, testes e edição do código durante o processo.
                 </p>
 
-                <h1 className="font-chubbo-bold md:text-3xl text-2xl text-[#3399FF] mt-2">Processo</h1>
+                <h1 className="font-chubbo-bold md:text-3xl text-2xl dark:text-[#3399FF] text-[#226EBA] mt-2">Processo</h1>
                 <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:gap-8 gap-2">
                     {Process.map((step, index) => (
-                        <div key={index} className="flex flex-col bg-[#0d0d0d] px-4 md:py-6 py-4 rounded-md md:gap-2">
+                        <div key={index} className="flex flex-col dark:bg-[#0d0d0d] bg-[#efefef] px-4 md:py-6 py-4 rounded-md md:gap-2">
                             <h1
-                                className={`font-chubbo-bold md:text-xl text-lg ${index === 3 || index === 5 ? 'text-yellow-300/90' : 'text-zinc-50'
+                                className={`font-chubbo-bold md:text-xl text-lg ${index === 3 || index === 5 ? 'dark:text-yellow-300/90 text-yellow-500/90' : 'dark:text-zinc-50 text-zinc-800'
                                     }`}
                             >
                                 {step.step}
                             </h1>
-                            <p className="dark:text-zinc-200 md:text-lg font-supreme text-pretty">{step.description}</p>
+                            <p className="dark:text-zinc-50 text-zinc-800 md:text-lg font-supreme text-pretty">{step.description}</p>
                         </div>
                     ))}
                 </section>
             </section>
 
             <section className='px-[4vw] md:px-[12vw] flex flex-col md:gap-8 gap-4' >
-                <h1 className="font-chubbo-bold md:text-3xl text-2xl text-[#3399FF]">Funcionalidades</h1>
-                <div className="flex flex-col md:gap-6 gap-2">
+                <h1 className="font-chubbo-bold md:text-3xl text-2xl dark:text-[#3399FF] text-[#226EBA]">Funcionalidades</h1>
+                <div className="dark:text-zinc-50 text-zinc-800 flex flex-col md:gap-6 gap-2">
                     {Features.map((feature) => (
                         <div className="flex flex-col md:gap-2 gap-1 mt-1">
                             <p className="dark:text-zinc-200 text-xl font-chubbo-bold w-5/6 text-pretty">

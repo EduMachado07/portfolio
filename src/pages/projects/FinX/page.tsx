@@ -4,7 +4,6 @@ import register from "@/assets/FinX/register.png"
 import historic from "@/assets/FinX/historic.png"
 import categorys from "@/assets/FinX/categorys.png"
 import graphics from "@/assets/FinX/graphics.gif"
-import process from '@/assets/FinX/process.png'
 import ComponentTitle from '@/components/title'
 import { LaptopMinimal, Smartphone, SquareArrowOutUpRight } from 'lucide-react'
 import {
@@ -44,43 +43,43 @@ const Page = () => {
             <BackButton />
             {/* ABOUT PROJECT */}
             <section className='px-[4vw] md:px-[12vw] flex flex-col md:gap-8 gap-4 -mt-10'>
-                <img src={mainPage} alt="sorry, internal problems" className='w-full rounded-sm shadow-lg dark:shadow-zinc-80' />
+                <img src={mainPage} alt="sorry, internal problems" className='w-full rounded-sm shadow-lg' />
                 <ComponentTitle value={Projects[2].title} />
-                <p className="dark:text-zinc-50 md:text-xl text-lg font-supreme md:w-5/6 text-pretty">
+                <p className="dark:text-zinc-50 text-zinc-800 md:text-xl text-lg font-supreme md:w-5/6 text-pretty">
                     {Projects[0].description} <a target='_blank' href="https://fin-x-three.vercel.app/" className='underline underline-offset-4 font-supreme-bold'>Experimente!</a>
                 </p>
                 {/* DATA */}
                 <div className='flex max-md:flex-col gap-4 md:w-5/6 md:justify-between'>
                     {/* PROJECT TYPE */}
-                    <p className="font-supreme md:text-lg flex flex-col md:gap-2">
-                        <span className="font-supreme-bold md:text-xl text-lg text-[#3399FF]">Tipo de projeto:</span>
+                    <p className="dark:text-zinc-50 text-zinc-900 font-supreme md:text-lg flex flex-col md:gap-2">
+                        <span className="font-supreme-bold md:text-xl text-lg dark:text-[#3399FF] text-[#226EBA]">Tipo de projeto:</span>
                         {Projects[0].purpose} / {Projects[0].systemType}
                     </p>
                     {/* FOR */}
-                    <p className="font-supreme md:text-lg flex flex-col md:gap-2.5 gap-1">
-                        <span className="font-supreme-bold md:text-xl text-lg text-[#3399FF]">Para:</span>
+                    <p className="dark:text-zinc-50 text-zinc-900 font-supreme md:text-lg flex flex-col md:gap-2.5 gap-1">
+                        <span className="font-supreme-bold md:text-xl text-lg dark:text-[#3399FF] text-[#226EBA]">Para:</span>
                         <a href='https://fin-x-three.vercel.app/' target='_blank' className='flex items-center gap-1.5'><LaptopMinimal size={20} />Desktop</a>
                         <a href='https://github.com/EduMachado07/FinX' target='_blank' className='flex items-center gap-1.5'><Smartphone size={20} />Mobile</a>
                     </p>
                     {/* CATEGORY */}
-                    <p className="font-supreme md:text-lg flex flex-col md:gap-2">
-                        <span className="font-supreme-bold md:text-xl text-lg text-[#3399FF]">Categoria:</span>
+                    <p className="dark:text-zinc-50 text-zinc-900 font-supreme md:text-lg flex flex-col md:gap-2">
+                        <span className="font-supreme-bold md:text-xl text-lg dark:text-[#3399FF] text-[#226EBA]">Categoria:</span>
                         Finanças / Produtividade
                     </p>
                     {/* TECHNOLOGYS */}
-                    <p className="md:w-70 font-supreme md:text-lg flex flex-col md:gap-2">
-                        <span className="font-supreme-bold md:text-xl text-lg text-[#3399FF]">Tecnologias utilizadas:</span>
+                    <p className="dark:text-zinc-50 text-zinc-900 md:w-70 font-supreme md:text-lg flex flex-col md:gap-2">
+                        <span className="font-supreme-bold md:text-xl text-lg dark:text-[#3399FF] text-[#226EBA]">Tecnologias utilizadas:</span>
                         TypeScrypt, React, Vite, Tailwind, Shadcn/ui, Vercel
                     </p>
                     {/* LINKS */}
-                    <p className="font-supreme md:text-lg flex flex-col md:gap-2.5 gap-1">
-                        <span className="font-supreme-bold md:text-xl text-lg text-[#3399FF]">Links:</span>
+                    <p className="dark:text-zinc-50 text-zinc-900 font-supreme md:text-lg flex flex-col md:gap-2.5 gap-1">
+                        <span className="font-supreme-bold md:text-xl text-lg dark:text-[#3399FF] text-[#226EBA]">Links:</span>
                         <a href={Projects[0].linkProject} target='_blank' className='underline underline-offset-4 flex items-center gap-1.5'><SquareArrowOutUpRight size={20} />Site Fin-X</a>
                         <a href={Projects[0].linkGithub} target='_blank' className='underline underline-offset-4 flex items-center gap-1.5'><SquareArrowOutUpRight size={20} />GitHub</a>
                     </p>
                 </div>
                 {/* MOTIVO */}
-                <p className="font-supreme md:text-lg flex flex-col md:gap-3 gap-2 md:w-4/6 text-pretty">
+                <p className="dark:text-zinc-50 text-zinc-900 font-supreme md:text-lg flex flex-col md:gap-3 gap-2 md:w-4/6 text-pretty">
                     <span className="font-chubbo-bold text-2xl text-orange-400/90">Motivo</span>
                     <span>
                         Este projeto faz parte do meu portfólio pessoal. Desenvolvi com foco no aprendizado e evolução como desenvolvedor, mas também pensando em entregar uma experiência simples e útil para quem quiser utilizá-lo.
@@ -99,8 +98,8 @@ const Page = () => {
             </section>
 
             {/* FEATURES */}
-            <section className='bg-[#222] md:py-12 py-6 px-[4vw] md:px-[12vw] shadow-md dark:shadow-zinc-800 flex flex-col gap-4'>
-                <h1 className="font-chubbo-bold md:text-3xl text-2xl text-[#3399FF]">Funcionalidades</h1>
+            <section className='dark:bg-[#222] bg-[#fafafa] dark:text-zinc-50 text-zinc-900 md:py-12 py-6 px-[4vw] md:px-[12vw] shadow-md dark:shadow-zinc-800 flex flex-col gap-4'>
+                <h1 className="font-chubbo-bold md:text-3xl text-2xl dark:text-[#3399FF] text-[#226EBA]">Funcionalidades</h1>
                 <section className='md:px-14'>
                     <Carousel setApi={setApi} orientation='horizontal'>
                         <CarouselContent>
@@ -141,7 +140,7 @@ const Page = () => {
                             {/* 03. Histórico das Transações Armazenado Localmente */}
                             <CarouselItem className='flex max-md:flex-col-reverse max-md:justify-end md:items-center md:gap-14 gap-4 md:px-8'>
                                 <div className='md:w-2/4 flex flex-col md:gap-4 gap-2 md:py-2'>
-                                    <h1 className="font-supreme-bold text-2xl text-pretty text-zinc-50">03. Histórico das Transações Armazenado Localmente</h1>
+                                    <h1 className="font-supreme-bold text-2xl text-pretty">03. Histórico das Transações Armazenado Localmente</h1>
                                     <p className="dark:text-zinc-50 text-lg font-supreme text-pretty">
                                         Todas as transações são salvas diretamente no navegador do usuário, por meio do localStorage, garantindo que os dados estejam disponíveis mesmo após fechar e reabrir o site.
                                     </p>
@@ -159,7 +158,7 @@ const Page = () => {
                             {/* 04. Gráficos e Estatísticas (Anual, Mensal e Semanal) */}
                             <CarouselItem className='flex max-md:flex-col-reverse max-md:justify-end md:items-center gap-8 md:px-8'>
                                 <div className='md:w-2/4 flex flex-col gap-4 md:py-2'>
-                                    <h1 className="font-supreme-bold text-2xl text-zinc-50 text-balance">04. Gráficos e Estatísticas (Anual, Mensal e Semanal)</h1>
+                                    <h1 className="font-supreme-bold text-2xl text-balance">04. Gráficos e Estatísticas (Anual, Mensal e Semanal)</h1>
                                     <p className="dark:text-zinc-50 text-lg font-supreme text-pretty">
                                         O sistema permite que o usuário registre manualmente todas as suas movimentações financeiras, sejam receitas ou despesas.
                                     </p>
@@ -178,7 +177,7 @@ const Page = () => {
                         <CarouselPrevious className='max-md:hidden' />
                         <CarouselNext className='max-md:hidden' />
                         <div className="text-muted-foreground text-center text-lg relative">
-                            <span className='dark:bg-[#222] relative z-10 px-2'>{current} de {count}</span>
+                            <span className='dark:bg-[#222] bg-[#fafafa] relative z-10 px-2'>{current} de {count}</span>
                             <hr className='border-2 bg-muted-foreground absolute left-1/2 top-1/2 w-40 -translate-x-1/2' />
                         </div>
                     </Carousel>
@@ -186,9 +185,9 @@ const Page = () => {
             </section>
 
             {/* HOW CAN I and PROCESS */}
-            <section className='px-[4vw] md:px-[12vw] flex flex-col md:gap-6 gap-4'>
+            <section className='dark:text-zinc-50 text-zinc-900 px-[4vw] md:px-[12vw] flex flex-col md:gap-6 gap-4'>
                 <h1 className="font-supreme-bold text-xl text-orange-400/90 -mb-4">Desafio</h1>
-                <h1 className="font-chubbo-bold md:text-3xl text-2xl text-[#3399FF]">Como Posso...</h1>
+                <h1 className="font-chubbo-bold md:text-3xl text-2xl dark:text-[#3399FF] text-[#226EBA]">Como Posso...</h1>
                 <ul className="list-disc pl-5 font-supreme md:text-xl text-lg">
                     <li className='md:mt-1.5 mt-1'>Como posso <span className='font-supreme-bold'>facilitar o uso de um sistema de gestão financeira?</span></li>
                     <li className='md:mt-1.5 mt-1'>Como posso <span className='font-supreme-bold'>conscientizar os usuários da importância do controle financeiro?</span></li>

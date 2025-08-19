@@ -7,7 +7,6 @@ import {
   LaptopMinimal,
   Smartphone,
   SquareArrowOutUpRight,
-  Square,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import wall from "@/assets/Fatec/primarySem/pages.png";
@@ -48,19 +47,19 @@ const Page = () => {
       {/* ABOUT PROJECT */}
       <section className="px-[4vw] md:px-[12vw] flex flex-col md:gap-8 gap-4 -mt-10">
         <ComponentTitle value={Projects[2].title} />
-        <p className="dark:text-zinc-200 md:text-xl text-lg font-supreme md:w-5/6 text-pretty">
+        <p className="dark:text-zinc-50 text-zinc-800 md:text-xl text-lg font-supreme md:w-5/6 text-pretty">
           {Projects[2].description}
         </p>
         <div className="flex max-md:flex-col gap-4 md:w-5/6 justify-between">
           {/* PROJECT TYPE */}
-          <p className="text-zinc-200 font-supreme md:text-lg flex flex-col md:gap-2">
+          <p className="dark:text-zinc-200 text-zinc-800 font-supreme md:text-lg flex flex-col md:gap-2">
             <span className="font-supreme-bold md:text-xl text-lg text-[#3399FF]">
               Tipo de projeto:
             </span>
             {Projects[2].purpose} / {Projects[2].systemType}
           </p>
           {/* FOR */}
-          <p className="text-zinc-200 font-supreme md:text-lg flex flex-col md:gap-2.5 gap-1">
+          <p className="dark:text-zinc-200 text-zinc-800 font-supreme md:text-lg flex flex-col md:gap-2.5 gap-1">
             <span className="font-supreme-bold md:text-xl text-lg text-[#3399FF]">
               Para:
             </span>
@@ -82,21 +81,21 @@ const Page = () => {
             </a>
           </p>
           {/* CATEGORY */}
-          <p className="md:w-50 text-zinc-200 font-supreme md:text-lg flex flex-col md:gap-2 text-pretty">
+          <p className="md:w-50 dark:text-zinc-200 text-zinc-800 font-supreme md:text-lg flex flex-col md:gap-2 text-pretty">
             <span className="font-supreme-bold md:text-xl text-[#3399FF]">
               Categoria:
             </span>
             Aprendizado Baseado em Projetos - ABP
           </p>
           {/* TECHNOLOGYS */}
-          <p className="text-zinc-200 md:w-70 font-supreme md:text-lg flex flex-col md:gap-2">
+          <p className="dark:text-zinc-200 text-zinc-800 md:w-70 font-supreme md:text-lg flex flex-col md:gap-2">
             <span className="font-supreme-bold md:text-xl text-lg text-[#3399FF]">
               Tecnologias utilizadas:
             </span>
             HTML, CSS, JavaScrypt, Node.js, PostgreSQL
           </p>
           {/* LINKS */}
-          <p className="text-zinc-200 font-supreme md:text-lg flex flex-col md:gap-2.5 gap-1">
+          <p className="dark:text-zinc-200 text-zinc-800 font-supreme md:text-lg flex flex-col md:gap-2.5 gap-1">
             <span className="font-supreme-bold md:text-xl text-lg text-[#3399FF]">
               Links:
             </span>
@@ -118,7 +117,7 @@ const Page = () => {
             </a>
           </p>
         </div>
-        <p className="text-zinc-200 font-supreme text-lg flex flex-col md:gap-3 gap-2 md:w-4/6 text-pretty">
+        <p className="dark:text-zinc-200 text-zinc-800  font-supreme text-lg flex flex-col md:gap-3 gap-2 md:w-4/6 text-pretty">
           <span className="font-chubbo-bold md:text-2xl text-xl text-orange-400/90">
             Motivo
           </span>
@@ -167,7 +166,7 @@ const Page = () => {
           </div>
         </p>
         {/* IMG PROJECT */}
-        <p className="font-supreme-bold md:text-xl text-lg text-[#3399FF] md:-mb-4 -mb-2">
+        <p className="font-supreme-bold md:text-xl text-lg dark:text-[#3399FF] text-[#226EBA] md:-mb-4 -mb-2">
           Imagens do Projeto
         </p>
         <img
@@ -176,10 +175,10 @@ const Page = () => {
           className="md:w-9/10 rounded-sm object-cover"
         />
         {/* PRODUCT BACKLOG */}
-        <p className="font-chubbo-bold md:text-3xl text-2xl text-[#3399FF]">
+        <p className="font-chubbo-bold md:text-3xl text-2xl dark:text-[#3399FF] text-[#226EBA]">
           Requisitos
         </p>
-        <div className="md:w-9/10 flex flex-col md:gap-8 gap-6">
+        <div className="dark:text-zinc-200 text-zinc-800  md:w-9/10 flex flex-col md:gap-8 gap-6">
           <h2 className="-mb-6 font-supreme-bold md:text-xl text-lg">
             Requisitos Funcionais
           </h2>
@@ -255,8 +254,8 @@ const Page = () => {
       </section>
 
       {/* MY ROLE and DELIVERABLES */}
-      <section className="bg-[#222] md:py-12 py-4 px-[4vw] md:px-[12vw] shadow-md dark:shadow-zinc-800 flex flex-col md:gap-4 gap-2">
-        <h1 className="font-chubbo-bold md:text-3xl text-2xl text-[#3399FF]">
+      <section className="dark:bg-[#222] bg-[#fafafa] dark:text-zinc-200 text-zinc-800  md:py-12 py-4 px-[4vw] md:px-[12vw] shadow-md dark:shadow-zinc-800 flex flex-col md:gap-4 gap-2">
+        <h1 className="font-chubbo-bold md:text-3xl text-2xl dark:text-[#3399FF] text-[#226EBA]">
           Meu Papel
         </h1>
         <p className="italic font-supreme md:text-lg">"Scrum Master"</p>
@@ -271,7 +270,7 @@ const Page = () => {
           decisões, funcionalidades e o processo de desenvolvimento adotado.
         </p>
         {/* DELIVERABLES */}
-        <h1 className="font-chubbo-bold md:text-3xl text-2xl text-[#3399FF]">
+        <h1 className="font-chubbo-bold md:text-3xl text-2xl dark:text-[#3399FF] text-[#226EBA]">
           Entregas
         </h1>
         <section className="md:w-5/6 flex flex-wrap max-md:gap-6 justify-between">
@@ -303,7 +302,7 @@ const Page = () => {
               Sprint 3 - 10 de junho
             </p>
             <ul className="flex flex-col gap-0.5 font-supreme text-lg">
-              <li className="font-supreme-bold text-yellow-300">
+              <li className="font-supreme-bold dark:text-yellow-300 text-yellow-500/80">
                 Projeto final
               </li>
               <li>Deploy - cliente e servidor</li>
@@ -311,7 +310,7 @@ const Page = () => {
             </ul>
           </div>
         </section>
-        <h1 className="font-chubbo-bold md:text-3xl text-2xl text-[#3399FF]">
+        <h1 className="font-chubbo-bold md:text-3xl text-2xl dark:text-[#3399FF] text-[#226EBA]">
           Progresso
         </h1>
         <Carousel setApi={setApi} orientation="horizontal" className="md:w-5/6 md:px-20">
@@ -349,7 +348,7 @@ const Page = () => {
       </section>
 
       <section className="w-full md:h-[70vh] px-[4vw] md:px-[12vw] flex flex-col md:gap-8 gap-4">
-        <h1 className="font-chubbo-bold md:text-3xl text-2xl text-[#3399FF]">
+        <h1 className="font-chubbo-bold md:text-3xl text-2xl dark:text-[#3399FF] text-[#226EBA]">
           Resumo do Projeto
         </h1>
         <iframe

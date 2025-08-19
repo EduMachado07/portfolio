@@ -46,10 +46,10 @@ const ProjectsPage = () => {
 
   return (
     <main className="px-[4vw] md:px-[12vw] flex-1 flex flex-col md:gap-8 gap-4">
-      <h1 className="text-[#3399FF] font-chubbo-bold md:text-5xl text-4xl">
+      <h1 className="dark:text-[#3399FF] text-[#226EBA] font-chubbo-bold md:text-5xl text-4xl">
         Projetos
       </h1>
-      <p className="dark:text-zinc-50 md:text-lg font-supreme md:w-4/5 text-balance">
+      <p className="dark:text-zinc-50 text-zinc-800 md:text-lg font-supreme md:w-4/5 text-balance">
         Explore aqui todo o meu portfólio de projetos. Cada projeto possui
         detalhamento do sistema, os processos realizados e demontrações dos meus
         trabalhos. <span className="font-supreme-bold">Aproveite!</span>
@@ -64,7 +64,7 @@ const ProjectsPage = () => {
             }
             target="_blank"
             rel="noopener noreferrer"
-            className="font-supreme-bold text-[#3399FF] hover:underline underline-offset-4"
+            className="font-supreme-bold dark:text-[#3399FF] text-[#226EBA] hover:underline underline-offset-4"
           >
             GitHub
           </a>{" "}

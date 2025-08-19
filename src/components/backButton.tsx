@@ -7,7 +7,7 @@ function BackButton() {
         <section className='px-[4vw] md:px-[12vw]'>
             <button
                 onClick={() => navigate(-1)}
-                className="font-supreme-bold text-lg text-[#3399FF] cursor-pointer"
+                className="font-supreme-bold text-lg dark:text-[#3399FF] text-[#226EBA] cursor-pointer"
             >
                 Voltar
             </button>

@@ -25,7 +25,7 @@ const CardDetails = ({
           {type.slice(0, 4).map((tag, index) => (
             <div
               key={index}
-              className="dark:text-zinc-50 dark:border-zinc-50 text-zinc-700 border-zinc-700 rounded-sm md:border-2 border px-2 py-0.5 md:text-sm text-xs font-supreme"
+              className="dark:text-zinc-50 dark:border-zinc-50 text-zinc-700 border-zinc-500 rounded-sm md:border-2 border px-2 py-0.5 md:text-sm text-xs font-supreme"
             >
               {tag}
             </div>
