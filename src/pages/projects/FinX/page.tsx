@@ -14,18 +14,18 @@ import {
     CarouselPrevious,
     type CarouselApi
 } from "@/components/ui/carousel"
-import React from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { SocialMedia } from '@/lib/socialMedia'
 import { Projects } from '@/lib/projects'
 import BackButton from '@/components/backButton'
 
 const Page = () => {
-    const [api, setApi] = React.useState<CarouselApi>()
-    const [current, setCurrent] = React.useState(0)
-    const [count, setCount] = React.useState(0)
+    const [api, setApi] = useState<CarouselApi>()
+    const [current, setCurrent] = useState(0)
+    const [count, setCount] = useState(0)
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (!api) {
             return
         }

@@ -1,4 +1,4 @@
-import React from 'react'
+import {useEffect, useState} from 'react'
 import BackButton from "@/components/backButton";
 import ComponentTitle from "@/components/title";
 import { Projects } from "@/lib/projects";
@@ -23,11 +23,11 @@ import burndown2 from "@/assets/Fatec/primarySem/burndownSprint2.png";
 import burndown3 from "@/assets/Fatec/primarySem/burndownSprint3.png";
 
 const Page = () => {
-  const [api, setApi] = React.useState<CarouselApi>();
-  const [current, setCurrent] = React.useState(0);
-  const [count, setCount] = React.useState(0);
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!api) {
       return;
     }
