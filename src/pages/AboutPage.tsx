@@ -73,7 +73,7 @@ const AboutPage = () => {
                                                     <MapPin size={20} /> {school.location}
                                                 </div>
                                             </div>
-                                            <p className="font-supreme md:text-lg text-zinc-800 dark:text-zinc-50">{school.description}</p>
+                                            <p className="md:w-4/5 font-supreme md:text-base text-zinc-800 dark:text-zinc-50">{school.description}</p>
                                         </div>
                                     </section>
                                 </div>

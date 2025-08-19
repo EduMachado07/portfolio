@@ -1,10 +1,12 @@
 import Navbar from "@/components/navbar";
+import ScrollToTop from "@/components/ScrollToTop";
 import { Dot } from "lucide-react";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
     <main className="min-h-dvh pb-6 md:pb-10 dark:bg-[#0d0d0d] bg-[#efefef] flex flex-col gap-4">
+      <ScrollToTop />
       <Navbar />
 
       <main className="flex-1">
