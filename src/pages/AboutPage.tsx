@@ -56,7 +56,7 @@ const AboutPage = () => {
                                 <div className="flex flex-col gap-2 text-zinc-50">
                                     <div className="mb-4">
                                         <h1 className="dark:text-zinc-50 text-zinc-700 font-chubbo-bold md:text-lg">{school.startDate}</h1>
-                                        <h1 className="dark:text-[#3399FF] text-[#226EBA] font-chubbo-bold md:text-xl text-base">{school.name}</h1>
+                                        <h1 className="dark:text-[#3399FF] text-[#226EBA] font-chubbo-bold md:text-xl text-base line-clamp-1">{school.name}</h1>
                                     </div>
                                     <section className="flex max-md:flex-col gap-6">
                                         <img
@@ -69,7 +69,7 @@ const AboutPage = () => {
                                                 <div className="max-md:text-sm flex items-center gap-1 text-zinc-800 dark:text-zinc-50">
                                                     <Calendar size={20} /> {school.startDate} - {school.endDate}
                                                 </div>
-                                                <div className="max-md:text-sm flex items-center gap-1 text-pretty text-zinc-800 dark:text-zinc-50">
+                                                <div className="max-md:text-sm flex md:items-center items-start gap-1 text-pretty text-zinc-800 dark:text-zinc-50">
                                                     <MapPin size={20} /> {school.location}
                                                 </div>
                                             </div>

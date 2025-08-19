@@ -1,5 +1,6 @@
 // import { ChevronLeft } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+// import logo from '../../public/my_logo.png'
 
 interface ILinks {
     name: string,
@@ -18,6 +19,7 @@ const Navbar = () => {
 
     return (
         <nav className="flex items-center justify-end px-[4vw] md:px-[12vw] py-6 md:text-lg text-base font-medium font-supreme">
+            {/* <img src={logo} alt="sorry, internal problems" className='size-12' /> */}
             <ul className="flex md:gap-8 gap-4">
                 {links.map((item, index) => {
                     const isActive = location.pathname.startsWith(item.to);
