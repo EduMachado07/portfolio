@@ -44,7 +44,7 @@ const Page = () => {
             {/* ABOUT PROJECT */}
             <section className='px-[4vw] md:px-[12vw] flex flex-col md:gap-8 gap-4 -mt-10'>
                 <img src={mainPage} alt="sorry, internal problems" className='w-full rounded-sm shadow-lg' />
-                <ComponentTitle value={Projects[2].title} />
+                <ComponentTitle value={Projects[0].title} />
                 <p className="dark:text-zinc-50 text-zinc-800 md:text-xl text-lg font-supreme md:w-5/6 text-pretty">
                     {Projects[0].description} <a target='_blank' href="https://fin-x-three.vercel.app/" className='underline underline-offset-4 font-supreme-bold'>Experimente!</a>
                 </p>
