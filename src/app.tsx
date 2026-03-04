@@ -1,6 +1,6 @@
 import { RouterProvider, createBrowserRouter, Navigate } from 'react-router-dom';
 import Layout from './pages/LayoutPage';
-import Index from './pages/IndexPage';
+import Index from './app/home/home.view';
 import Projects from './pages/ProjectsPage';
 import Contact from './pages/ContactPage';
 import About from './pages/AboutPage';
