@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Flag } from "lucide-react";
 import { Link } from "react-router-dom";
 // import Contact from "@/components/contact";
-import imgFinX from "../../assets/FinX/mainPage.png";
+import imgFinX from "../../assets/FinX/img_note.png";
 
 const IndexPage = () => {
   return (
@@ -68,8 +68,8 @@ const IndexPage = () => {
       </div>
 
       <section className="w-full">
-        <div className="w-full flex justify-between">
-          <div className="pr-6 flex flex-col gap-4">
+        <div className="w-full flex justify-between items-center">
+          <div className="pr-6 flex flex-col gap-6">
             <div className="flex gap-6 font-bold font-supreme">
               <p>2025</p>
               <p>Typescript</p>
@@ -93,10 +93,23 @@ const IndexPage = () => {
               <Flag />
               <p>Conscientiza sobre gestão e planejamento</p>
             </div>
-            <Button>Saber mais</Button>
-            <Button>Abrir site</Button>
+            <div className="flex gap-2">
+              <Button size={"lg"} variant={"outline"} className="rounded-full">
+                Saber mais
+              </Button>
+              <Button
+                size={"lg"}
+                variant={"secondary"}
+                className="rounded-full"
+              >
+                Abrir site
+              </Button>
+            </div>
           </div>
-          <img src={imgFinX} alt="Fin-X image" className="w-[45%] rounded-md" />
+
+          <section className="w-full h-[70dvh] rounded-md overflow-hidden">
+            <img src={imgFinX} alt="Fin-X image" className="h-full w-full" />
+          </section>
         </div>
       </section>
 
