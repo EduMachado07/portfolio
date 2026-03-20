@@ -81,7 +81,7 @@ const Contact = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit(sendEmail)} className="flex flex-col md:gap-6 gap-5">
+        <form onSubmit={handleSubmit(sendEmail)} className="w-full flex flex-col md:gap-6 gap-5">
             <p className="dark:text-zinc-50 text-zinc-900 md:text-lg text-base font-supreme text-pretty">
                 Deseja trabalhar comigo ou tem uma ideia para ser desenvolvida? Entre em contato. <span className="font-supreme-bold dark:text-[#3399FF] text-[#226EBA]">Vamos construir algo juntos!</span>
             </p>

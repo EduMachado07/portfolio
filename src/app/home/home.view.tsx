@@ -1,15 +1,13 @@
-import { Card } from "@/components/Card";
-// import Presentation from "@/components/Presentation";
-import { Projects } from "@/lib/projects";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Flag } from "lucide-react";
-import { Link } from "react-router-dom";
-// import Contact from "@/components/contact";
+import { Highlighter, KeyRound } from "lucide-react";
 import imgFinX from "../../assets/FinX/img_note.png";
+import { SectionProject } from "@/components/SectionProject";
+import Contact from "@/components/contact";
+import { Typograph } from "@/components/Typograph";
 
 const IndexPage = () => {
   return (
-    <main className="flex-1 flex flex-col md:gap-10 gap-8 px-[4vw] md:px-[12vw]">
+    <main className="flex-1 flex flex-col items-center md:gap-10 gap-8 px-[4vw] md:px-[12vw]">
       {/* <Presentation /> */}
 
       {/* <div className="flex justify-between -mb-6">
@@ -47,12 +45,10 @@ const IndexPage = () => {
             </section> */}
 
       {/* PROJECTS */}
-      <div className="flex justify-between -mb-6">
-        <h1 className="dark:text-[#3399FF] text-[#226EBA] font-chubbo-bold md:text-2xl text-xl">
-          Projetos
-        </h1>
+      <Typograph.Title text="Projetos" />
+      {/* <div className="flex justify-between -mb-6">
 
-        {/* <Link to="/projects">
+        <Link to="/projects">
           <Button
             size={"default"}
             variant={"link"}
@@ -64,56 +60,80 @@ const IndexPage = () => {
           <Button size={"default"} variant={"link"} className="md:hidden">
             <ArrowRight />
           </Button>
-        </Link> */}
-      </div>
+        </Link>
+      </div> */}
 
-      <section className="w-full">
-        <div className="w-full flex justify-between items-center">
-          <div className="pr-6 flex flex-col gap-6">
-            <div className="flex gap-6 font-bold font-supreme">
-              <p>2025</p>
-              <p>Typescript</p>
-              <p>Pessoal</p>
-            </div>
+      <SectionProject.Root>
+        <SectionProject.Details
+          details={["2025", "TypeScript", "Fullstack", "Client"]}
+          title="Estudos Dom Pedro I - Um sistema web de estudos bíblicos"
+          description="Um sistema que transforma anotações normalmente feitas em diversos aplicativos diferentes em um sistema único, que permite registrar pensamentos, interpretações e referências de forma organizada e acessível aos leitores."
+        >
+          <SectionProject.Flag
+            title="Textos mais bonitos"
+            Flag={Highlighter}
+            goal="Formatação de texto integrado com inteligência artificial"
+          />
+          <SectionProject.Flag
+            title="Autenticação segura e praticidade"
+            Flag={KeyRound}
+            goal="Renovação de tokens com processo de Refresh Token"
+          />
 
-            <h1 className="dark:text-[#3399FF] text-[#226EBA] font-chubbo-bold md:text-4xl text-xl">
-              Fin X - Um sistema de gestão financeira
-            </h1>
-            <p className="dark:text-zinc-50 text-zinc-800 md:text-xl text-lg font-supreme text-pretty">
-              Um sistema web de gestão financeira desenvolvido para usuários que
-              desejam ter mais controle sobre suas finanças. Meu objetivo é
-              facilitar o controle financeiro e sobre a importância da gestão e
-              do planejamento do dinheiro para as suas vidas.
-            </p>
-            <div className="p-3 px-5 w-fit flex gap-4 rounded-full bg-[#3399FF55]">
-              <Flag />
-              <p>Facilita o controle financeiro</p>
-            </div>
-            <div className="p-3 px-5 w-fit flex gap-4 rounded-full bg-[#3399FF55]">
-              <Flag />
-              <p>Conscientiza sobre gestão e planejamento</p>
-            </div>
-            <div className="flex gap-2">
-              <Button size={"lg"} variant={"outline"} className="rounded-full">
-                Saber mais
-              </Button>
+          <div className="flex gap-2">
+            <Button size={"lg"} variant={"outline"} className="rounded-full">
+              Saber mais
+            </Button>
+            <a href="https://dpi-estudos.vercel.app/" target="_blank">
               <Button
                 size={"lg"}
                 variant={"secondary"}
                 className="rounded-full"
               >
-                Abrir site
+                Abrir sistema
               </Button>
-            </div>
+            </a>
           </div>
+        </SectionProject.Details>
+        <SectionProject.Image img={imgFinX}></SectionProject.Image>
+      </SectionProject.Root>
+      
+      <SectionProject.Root>
+        <SectionProject.Image img={imgFinX}/>
+        <SectionProject.Details
+          details={["2025", "TypeScript", "Fullstack", "Client"]}
+          title="Etec Jobs - App Android para divulgação de vagas de emprego"
+          description="Um sistema que transforma anotações normalmente feitas em diversos aplicativos diferentes em um sistema único, que permite registrar pensamentos, interpretações e referências de forma organizada e acessível aos leitores."
+        >
+          <SectionProject.Flag
+            title="Textos mais bonitos"
+            Flag={Highlighter}
+            goal="Formatação de texto integrado com inteligência artificial"
+          />
+          <SectionProject.Flag
+            title="Autenticação segura e praticidade"
+            Flag={KeyRound}
+            goal="Renovação de tokens com processo de Refresh Token"
+          />
 
-          <section className="w-full h-[70dvh] rounded-md overflow-hidden">
-            <img src={imgFinX} alt="Fin-X image" className="h-full w-full" />
-          </section>
-        </div>
-      </section>
+          <div className="flex gap-2">
+            <Button size={"lg"} variant={"outline"} className="rounded-full">
+              Saber mais
+            </Button>
+            <a href="https://dpi-estudos.vercel.app/" target="_blank">
+              <Button
+                size={"lg"}
+                variant={"secondary"}
+                className="rounded-full"
+              >
+                Abrir sistema
+              </Button>
+            </a>
+          </div>
+        </SectionProject.Details>
+      </SectionProject.Root>
 
-      <section className="grid grid-cols-1 md:grid-cols-3 md:gap-8 gap-4">
+      {/* <section className="grid grid-cols-1 md:grid-cols-3 md:gap-8 gap-4">
         {Projects.slice(0, 1).map((item, index) => (
           <Card.Root key={index}>
             <Card.Image linkProject={item.linkProject} img={item.img} />
@@ -126,13 +146,14 @@ const IndexPage = () => {
             />
           </Card.Root>
         ))}
-      </section>
+      </section> */}
+
+      <hr className="w-1/4 bg-zinc-500"/>
 
       {/* CONTACT */}
-      {/* <h1 className="dark:text-[#3399FF] text-[#226EBA] font-chubbo-bold md:text-2xl text-xl -mb-6">
-        Fale Comigo
-      </h1>
-      <Contact /> */}
+      <Typograph.Title text="Fale Comigo" />
+
+      <Contact />
     </main>
   );
 };
