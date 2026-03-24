@@ -1,13 +1,15 @@
 import { Button } from "@/components/ui/button";
-import { Highlighter, KeyRound } from "lucide-react";
-import imgFinX from "../../assets/FinX/img_note.png";
+import { Globe, Highlighter, KeyRound, Zap } from "lucide-react";
+import img_DpiEstudos from "../../assets/DpiEstudos/imgProject_Note.png";
+import img_EtecJobs from "../../assets/EtecJobs/imgProject_Cell.png";
 import { SectionProject } from "@/components/SectionProject";
 import Contact from "@/components/contact";
 import { Typograph } from "@/components/Typograph";
+import { Link } from "react-router";
 
 const IndexPage = () => {
   return (
-    <main className="flex-1 flex flex-col items-center md:gap-10 gap-8 px-[4vw] md:px-[12vw]">
+    <main className="flex-1 flex flex-col items-center md:gap-16 gap-8 px-[4vw] md:px-[12vw]">
       {/* <Presentation /> */}
 
       {/* <div className="flex justify-between -mb-6">
@@ -82,7 +84,7 @@ const IndexPage = () => {
 
           <div className="flex gap-2">
             <Button size={"lg"} variant={"outline"} className="rounded-full">
-              Saber mais
+              Saber Mais
             </Button>
             <a href="https://dpi-estudos.vercel.app/" target="_blank">
               <Button
@@ -90,43 +92,51 @@ const IndexPage = () => {
                 variant={"secondary"}
                 className="rounded-full"
               >
-                Abrir sistema
+                Abrir Sistema
               </Button>
             </a>
           </div>
         </SectionProject.Details>
-        <SectionProject.Image img={imgFinX}></SectionProject.Image>
+        <SectionProject.Image img={img_DpiEstudos} />
       </SectionProject.Root>
-      
+
       <SectionProject.Root>
-        <SectionProject.Image img={imgFinX}/>
+        <SectionProject.Image img={img_EtecJobs} />
         <SectionProject.Details
-          details={["2025", "TypeScript", "Fullstack", "Client"]}
-          title="Etec Jobs - App Android para divulgação de vagas de emprego"
-          description="Um sistema que transforma anotações normalmente feitas em diversos aplicativos diferentes em um sistema único, que permite registrar pensamentos, interpretações e referências de forma organizada e acessível aos leitores."
+          details={[
+            "2024",
+            "JavaScript",
+            "React Native",
+            "Mobile",
+            "Hackathon",
+          ]}
+          title="Etec Jobs - App Android para divulgação e procura de vagas de emprego"
+          description="Sistema desenvolvido para o Hackathon Etec 2024, com o objetivo de criar um aplicativo Android para a divulgação e procura de vagas de emprego, conectando candidatos a oportunidades de trabalho de forma eficiente e acessível."
         >
           <SectionProject.Flag
-            title="Textos mais bonitos"
-            Flag={Highlighter}
-            goal="Formatação de texto integrado com inteligência artificial"
+            title="Conexão direta entre candidatos e oportunidades"
+            Flag={Globe}
+            goal="Facilita o encontro entre empregadores e empregados."
           />
           <SectionProject.Flag
-            title="Autenticação segura e praticidade"
-            Flag={KeyRound}
-            goal="Renovação de tokens com processo de Refresh Token"
+            title="Experiência rápida e intuitiva"
+            Flag={Zap}
+            goal="Usuários encontram oportunidades de trabalho em poucos passos."
           />
 
           <div className="flex gap-2">
-            <Button size={"lg"} variant={"outline"} className="rounded-full">
-              Saber mais
-            </Button>
-            <a href="https://dpi-estudos.vercel.app/" target="_blank">
+            <Link to="/projects/etec-jobs">
+              <Button size={"lg"} variant={"outline"} className="rounded-full">
+                Saber Mais
+              </Button>
+            </Link>
+            <a href="https://drive.google.com/file/d/1b6FxTJDU-GvtZ0CRqPeFmiGuM87XTGCm/view" target="_blank">
               <Button
                 size={"lg"}
                 variant={"secondary"}
                 className="rounded-full"
               >
-                Abrir sistema
+                Fazer Download
               </Button>
             </a>
           </div>
@@ -148,7 +158,7 @@ const IndexPage = () => {
         ))}
       </section> */}
 
-      <hr className="w-1/4 bg-zinc-500"/>
+      <hr className="w-1/4 bg-zinc-500" />
 
       {/* CONTACT */}
       <Typograph.Title text="Fale Comigo" />
