@@ -1,0 +1,95 @@
+import { useState } from "react";
+import { Link, NavLink } from "react-router";
+import { Briefcase, Home, Mail, Menu, User, X } from "lucide-react";
+
+const NAV_LINKS = [
+  { label: "Início", to: "/", icon: Home },
+  { label: "Projetos", to: "/projetos", icon: Briefcase },
+  { label: "Sobre", to: "/sobre", icon: User },
+  { label: "Contato", to: "/contato", icon: Mail },
+];
+
+export const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <header className="sticky top-0 z-50 border-b border-zinc-200 backdrop-blur-md">
+      <div className="flex items-center justify-between px-[6%] py-4 md:px-[22%]">
+        <Link to="/" className="text-lg font-bold tracking-tight text-zinc-950">
+          Machado<span className="text-zinc-400">.</span>
+        </Link>
+
+        <nav className="hidden items-center gap-1 md:flex">
+          {NAV_LINKS.map((link) => {
+            const Icon = link.icon;
+
+            return (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                end={link.to === "/"}
+                className={({ isActive }) =>
+                  `flex items-center overflow-hidden rounded-xl px-2.5 py-2 text-sm font-medium transition-colors duration-500 ${
+                    isActive
+                      ? "border border-zinc-300 bg-zinc-300 text-zinc-900"
+                      : "border border-transparent text-zinc-500 hover:bg-zinc-100 hover:text-zinc-950"
+                  }`
+                }
+              >
+                {({ isActive }) => (
+                  <>
+                    <Icon size={18} className="shrink-0" />
+                    <span
+                      className={`overflow-hidden whitespace-nowrap transition-all duration-500 ease-in-out ${
+                        isActive ? "ml-2 max-w-[8rem] opacity-100" : "max-w-0 opacity-0"
+                      }`}
+                    >
+                      {link.label}
+                    </span>
+                  </>
+                )}
+              </NavLink>
+            );
+          })}
+        </nav>
+
+        <button
+          type="button"
+          onClick={() => setOpen((prev) => !prev)}
+          className="flex items-center justify-center rounded-md border border-zinc-200 p-2 text-zinc-700 md:hidden"
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={open}
+        >
+          {open ? <X size={20} /> : <Menu size={20} />}
+        </button>
+      </div>
+
+      {open && (
+        <nav className="flex flex-col gap-1 border-t border-zinc-200 bg-white px-[6%] py-4 md:hidden">
+          {NAV_LINKS.map((link) => {
+            const Icon = link.icon;
+
+            return (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                end={link.to === "/"}
+                onClick={() => setOpen(false)}
+                className={({ isActive }) =>
+                  `flex items-center gap-2.5 rounded-md px-3 py-2 text-sm font-medium ${
+                    isActive
+                      ? "bg-zinc-100 text-zinc-950"
+                      : "text-zinc-500 hover:bg-zinc-50 hover:text-zinc-950"
+                  }`
+                }
+              >
+                <Icon size={18} />
+                {link.label}
+              </NavLink>
+            );
+          })}
+        </nav>
+      )}
+    </header>
+  );
+};
