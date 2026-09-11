@@ -2,7 +2,7 @@ import { ArrowRight, Github, Layers, Sparkles, UserRound } from "lucide-react";
 import { Link } from "react-router";
 import { Button } from "@/components/ui/button";
 import { FeaturedProjects } from "./homepage_model";
-import { Reveal } from "./homepage_reveal";
+import { Reveal } from "@/components/v2/reveal";
 
 export const ProjectsSection = () => {
   return (
@@ -33,49 +33,67 @@ export const ProjectsSection = () => {
           const TypeIcon = project.typeIcon;
 
           return (
-            <article
-              key={project.slug}
-              className="border-zinc-200"
-            >
+            <article key={project.slug} className="border-zinc-200">
               <div
                 className={`mx-auto flex w-full max-w-6xl flex-col items-center gap-10 px-[6%] py-16 md:py-20 lg:gap-16 lg:px-12 lg:py-24 ${
                   reversed ? "lg:flex-row-reverse" : "lg:flex-row"
                 }`}
               >
                 {/* image */}
-                <Reveal className="group relative w-full max-w-md shrink-0 lg:max-w-none lg:flex-1">
+                <Reveal className="group relative w-full h-full max-w-md shrink-0 lg:max-w-none lg:flex-1">
                   {/* <span className="absolute -top-3 -left-3 z-10 flex items-center gap-1 rounded-full bg-zinc-950 px-3 py-1 text-[11px] font-semibold text-white shadow-md">
                     Destaque {String(index + 1).padStart(2, "0")}
                   </span> */}
 
-                  <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-xl shadow-zinc-300/70 transition-transform duration-300 group-hover:-translate-y-1.5">
-                    <div className="flex items-center gap-1.5 border-b border-zinc-200 bg-zinc-50 px-4 py-2">
-                      <span className="size-2.5 rounded-full bg-red-400" />
-                      <span className="size-2.5 rounded-full bg-yellow-400" />
-                      <span className="size-2.5 rounded-full bg-green-400" />
-                      <span className="ml-3 truncate rounded-md border border-zinc-200 bg-white px-2 py-0.5 text-[11px] text-zinc-400">
-                        {project.domain}
-                      </span>
+                  {project.platform === "mobile" ? (
+                    <div className="mx-auto w-full max-w-[240px] overflow-hidden rounded-[2.25rem] border-[10px] border-zinc-900 bg-zinc-900 shadow-xl shadow-zinc-300/70 transition-transform duration-300 group-hover:-translate-y-1.5 sm:max-w-[260px]">
+                      <div className="relative aspect-[9/19] overflow-hidden rounded-[1.5rem] bg-zinc-100">
+                        <span className="absolute left-1/2 top-0 z-10 h-5 w-24 -translate-x-1/2 rounded-b-2xl bg-zinc-900" />
+                        <img
+                          src={project.img}
+                          alt={`Prévia do app ${project.title}`}
+                          loading="lazy"
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </div>
                     </div>
+                  ) : (
+                    <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-xl shadow-zinc-300/70 transition-transform duration-300 group-hover:-translate-y-1.5">
+                      <div className="flex items-center gap-1.5 border-b border-zinc-200 bg-zinc-50 px-4 py-2">
+                        <span className="size-2.5 rounded-full bg-red-400" />
+                        <span className="size-2.5 rounded-full bg-yellow-400" />
+                        <span className="size-2.5 rounded-full bg-green-400" />
+                        <span className="ml-3 truncate rounded-md border border-zinc-200 bg-white px-2 py-0.5 text-[11px] text-zinc-400">
+                          {project.domain}
+                        </span>
+                      </div>
 
-                    <div className="relative aspect-video overflow-hidden bg-zinc-100">
-                      <img
-                        src={project.img}
-                        alt={`Prévia do projeto ${project.title}`}
-                        loading="lazy"
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
+                      <div className="relative aspect-video overflow-hidden bg-zinc-100">
+                        <img
+                          src={project.img}
+                          alt={`Prévia do projeto ${project.title}`}
+                          loading="lazy"
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </div>
                     </div>
-                  </div>
+                  )}
 
-                  <span className="absolute -bottom-3 right-4 flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-xs font-medium text-zinc-700 shadow-md">
+                  <span
+                    className={`absolute -bottom-3 flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-xs font-medium text-zinc-700 shadow-md ${
+                      project.platform === "mobile" ? "left-1/2" : "right-4"
+                    }`}
+                  >
                     <TypeIcon size={13} />
                     {project.typeLabel}
                   </span>
                 </Reveal>
 
                 {/* content */}
-                <Reveal className="flex w-full flex-col gap-4 lg:flex-1" delay={0.15}>
+                <Reveal
+                  className="flex w-full flex-col gap-4 lg:flex-1"
+                  delay={0.15}
+                >
                   <span className="text-xs font-semibold uppercase tracking-widest text-zinc-400">
                     {project.year} · {project.tagline}
                   </span>
@@ -101,15 +119,23 @@ export const ProjectsSection = () => {
 
                   <div className="flex flex-col gap-2.5 border-t border-zinc-400 py-4">
                     <div className="flex items-start gap-2">
-                      <UserRound size={16} className="mt-0.5 shrink-0 text-zinc-400" />
+                      <UserRound
+                        size={16}
+                        className="mt-0.5 shrink-0 text-zinc-400"
+                      />
                       <p className="text-sm text-zinc-600">
-                        <span className="font-semibold text-zinc-900">Minha função: </span>
+                        <span className="font-semibold text-zinc-900">
+                          Minha função:{" "}
+                        </span>
                         {project.role}
                       </p>
                     </div>
 
                     <div className="flex items-start gap-2">
-                      <Layers size={16} className="mt-0.5 shrink-0 text-zinc-400" />
+                      <Layers
+                        size={16}
+                        className="mt-0.5 shrink-0 text-zinc-400"
+                      />
                       <div className="flex flex-wrap gap-1.5">
                         {project.technologies.map((tech) => (
                           <span
@@ -132,7 +158,11 @@ export const ProjectsSection = () => {
                             <ArrowRight size={16} />
                           </Button>
                         </Link>
-                        <a href={project.githubHref} target="_blank" rel="noopener noreferrer">
+                        <a
+                          href={project.githubHref}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Button
                             variant="ghost"
                             className="gap-2 border border-zinc-300 bg-white text-zinc-900 hover:bg-zinc-100"
@@ -143,7 +173,11 @@ export const ProjectsSection = () => {
                         </a>
                       </>
                     ) : (
-                      <a href={project.primaryAction.href} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={project.primaryAction.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Button className="gap-2 bg-zinc-950 text-white hover:bg-zinc-800">
                           <Github size={16} />
                           {project.primaryAction.label}

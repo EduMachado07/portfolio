@@ -1,7 +1,11 @@
 import { ArrowRight, Mail } from "lucide-react";
 import { Link } from "react-router";
 import { Button } from "@/components/ui/button";
-import { Reveal } from "./homepage_reveal";
+import bateriaImg from "@/assets/bateria/img_bateriaCompleta.png";
+import baquetasImg from "@/assets/bateria/img_baquetas.png";
+import pratoImg from "@/assets/bateria/img_prato.png";
+import tamborImg from "@/assets/bateria/img_tambor.png";
+import { Reveal } from "@/components/v2/reveal";
 
 export const ContactSection = () => {
   return (
@@ -13,6 +17,31 @@ export const ContactSection = () => {
             "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
           backgroundSize: "32px 32px",
         }}
+      />
+
+      <img
+        src={baquetasImg}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-4 left-32 hidden w-44 rotate-[160deg] object-contain opacity-[0.25] invert sm:block sm:w-26"
+      />
+      <img
+        src={bateriaImg}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-6 -left-2 hidden w-44 rotate-[-6deg] object-contain opacity-[0.25] invert sm:block sm:w-56"
+      />
+      <img
+        src={pratoImg}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-6 right-8 hidden w-28 rotate-6 object-contain opacity-[0.25] invert sm:block sm:w-36"
+      />
+      <img
+        src={tamborImg}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-4 -right-6 hidden w-20 rotate-[8deg] object-contain opacity-[0.25] invert sm:block sm:w-28"
       />
 
       <div className="relative flex flex-col items-center gap-4">

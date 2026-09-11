@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router";
 import { Briefcase, Home, Mail, Menu, User, X } from "lucide-react";
+import { Logo } from "./logo";
+import { ScrollProgressBar } from "./scroll-progress-bar";
 
 const NAV_LINKS = [
   { label: "Início", to: "/", icon: Home },
@@ -14,12 +16,15 @@ export const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-200 backdrop-blur-md">
-      <div className="flex items-center justify-between px-[6%] py-4 md:px-[22%]">
-        <Link to="/" className="text-lg font-bold tracking-tight text-zinc-950">
-          Machado<span className="text-zinc-400">.</span>
+      <ScrollProgressBar />
+
+      <div className="flex items-center justify-between px-[6%] py-2 md:px-[22%]">
+        <Link to="/" className="flex items-end gap-1.5 text-2xl font-bold tracking-tight text-zinc-950">
+          Machado
+          <Logo className="size-10 object-contain" />
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="hidden items-center gap-1 md:flex rounded-2xl border border-gray-200 py-2.5 px-6">
           {NAV_LINKS.map((link) => {
             const Icon = link.icon;
 
@@ -29,19 +34,19 @@ export const Navbar = () => {
                 to={link.to}
                 end={link.to === "/"}
                 className={({ isActive }) =>
-                  `flex items-center overflow-hidden rounded-xl px-2.5 py-2 text-sm font-medium transition-colors duration-500 ${
+                  `flex items-center overflow-hidden rounded-xl px-3 py-2.5 text-sm font-medium transition-colors duration-500 ${
                     isActive
-                      ? "border border-zinc-300 bg-zinc-300 text-zinc-900"
-                      : "border border-transparent text-zinc-500 hover:bg-zinc-100 hover:text-zinc-950"
+                      ? "border border-zinc-400 bg-zinc-100 text-zinc-900 px-6"
+                      : "border border-transparent text-zinc-500 hover:bg-zinc-100 hover:text-zinc-900"
                   }`
                 }
               >
                 {({ isActive }) => (
                   <>
-                    <Icon size={18} className="shrink-0" />
+                    <Icon size={16} className="shrink-0" />
                     <span
                       className={`overflow-hidden whitespace-nowrap transition-all duration-500 ease-in-out ${
-                        isActive ? "ml-2 max-w-[8rem] opacity-100" : "max-w-0 opacity-0"
+                        isActive ? "ml-3 max-w-[8rem] opacity-100" : "max-w-0 opacity-0"
                       }`}
                     >
                       {link.label}

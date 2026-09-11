@@ -8,9 +8,11 @@ import {
 } from "lucide-react";
 import { Link } from "react-router";
 import imgPerfil from "../../assets/perfil.jpeg";
+import pratoImg from "@/assets/bateria/img_prato.png";
+import tamborImg from "@/assets/bateria/img_baquetas.png";
 import { Button } from "@/components/ui/button";
 import { SocialMedia } from "@/lib/socialMedia";
-import { Reveal } from "./homepage_reveal";
+import { Reveal } from "@/components/v2/reveal";
 
 const linkedinLink = SocialMedia["Redes Sociais"].find(
   (item) => item.title === "LinkedIn",
@@ -31,8 +33,14 @@ export const AboutSection = () => {
           </p>
         </div>
 
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
-          Desenvolvedor Full Stack
+        <p className="flex items-center gap-1.5 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
+          Desenvolvedor Full Stack & Baterista
+          <img
+            src={pratoImg}
+            alt=""
+            aria-hidden="true"
+            className="size-6.5 object-contain opacity-70"
+          />
         </p>
 
         <h1 className="text-5xl font-bold leading-tight text-zinc-950 sm:text-6xl">
@@ -69,14 +77,31 @@ export const AboutSection = () => {
       </Reveal>
 
       <Reveal
-        className="flex flex-col justify-center items-center gap-6"
+        className="flex flex-col justify-center items-center gap-10"
         delay={0.15}
       >
-        <img
-          src={imgPerfil}
-          alt="Foto de perfil"
-          className="rounded-2xl shadow-lg aspect-square object-cover size-72 sm:size-80"
-        />
+        <div className="relative">
+          <img
+            src={imgPerfil}
+            alt="Foto de perfil"
+            className="rounded-2xl shadow-lg aspect-square object-cover size-72 sm:size-84"
+          />
+
+          <span className="absolute -bottom-5 -right-5 flex items-center justify-center gap-2 rounded-lg border bg-zinc-50 border-zinc-300 p-5 text-xs text-zinc-950">
+            {/* <Mail size={14} /> */}
+            Disponível para novos projetos
+            <span className="size-2.5 rounded-full bg-green-600 animate-pulse" />
+          </span>
+
+          <span className="absolute -top-4 -left-4 flex size-12 -rotate-12 items-center justify-center rounded-full border border-zinc-300 bg-white p-2.5 shadow-sm">
+            <img
+              src={tamborImg}
+              alt=""
+              aria-hidden="true"
+              className="h-full w-full object-contain opacity-70"
+            />
+          </span>
+        </div>
 
         <div className="flex flex-row gap-4">
           <section className="w-44 sm:w-56 border border-zinc-300 rounded-xl p-5 flex flex-row gap-3 items-center">

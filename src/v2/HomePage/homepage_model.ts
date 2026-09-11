@@ -1,5 +1,7 @@
 import { BookOpen, Smartphone, Workflow, type LucideIcon } from "lucide-react";
 import { Projects } from "@/lib/projects";
+import imgEstudosDpi from "../../assets/img_estudosDpi.png";
+import imgDevflowCrm from "../../assets/devflow_crm/logo.png";
 
 const etecJobs = Projects.find((project) => project.linkPageProject === "etec-jobs")!;
 
@@ -10,6 +12,7 @@ export interface IFeaturedProject {
   description: string;
   img: string;
   domain: string;
+  platform: "web" | "mobile";
   typeLabel: string;
   typeIcon: LucideIcon;
   role: string;
@@ -27,8 +30,9 @@ export const FeaturedProjects: IFeaturedProject[] = [
     tagline: "Sistema web para organizar estudos bíblicos",
     description:
       "Sistema web pessoal para reunir estudos bíblicos que antes ficavam espalhados em vários apps, com criação, busca e categorização de estudos em um só lugar.",
-    img: "https://opengraph.githubassets.com/1/EduMachado07/estudos_dpi",
+    img: imgEstudosDpi,
     domain: "github.com/EduMachado07/estudos_dpi",
+    platform: "web",
     typeLabel: "Projeto Pessoal",
     typeIcon: BookOpen,
     role: "Desenvolvimento solo, do zero ao deploy",
@@ -48,8 +52,9 @@ export const FeaturedProjects: IFeaturedProject[] = [
     tagline: "Plataforma de gestão comercial para concessionária",
     description:
       "Plataforma de gestão de leads desenvolvida em parceria com a Fatec Jacareí para a 1000 Valle Multimarcas, centralizando em um único painel os leads vindos de vários canais e unidades.",
-    img: "https://opengraph.githubassets.com/1/prjDevflow/prj_3dsm",
+    img: imgDevflowCrm,
     domain: "github.com/prjDevflow/prj_3dsm",
+    platform: "web",
     typeLabel: "Sistema Web",
     typeIcon: Workflow,
     role: "Desenvolvimento full stack, do banco de dados às telas",
@@ -70,6 +75,7 @@ export const FeaturedProjects: IFeaturedProject[] = [
     description: etecJobs.description,
     img: etecJobs.img,
     domain: "Etec Jobs · App",
+    platform: "mobile",
     typeLabel: "App Mobile",
     typeIcon: Smartphone,
     role: "Desenvolvimento mobile em equipe, do protótipo à build final",

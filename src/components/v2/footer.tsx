@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { SocialMedia } from "@/lib/socialMedia";
+import { Logo } from "./logo";
 
 const NAV_LINKS = [
   { label: "Início", to: "/" },
@@ -15,8 +16,9 @@ export const Footer = () => {
     <footer className="border-t border-dotted border-zinc-300 px-[6%] py-12 md:px-[22%]">
       <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
         <div className="flex flex-col gap-3">
-          <Link to="/" className="text-lg font-bold tracking-tight text-zinc-950">
-            Machado<span className="text-zinc-400">.</span>
+          <Link to="/" className="flex items-end gap-1.5 text-lg font-bold tracking-tight text-zinc-950">
+            Machado
+            <Logo className="h-8 w-8 object-contain" />
           </Link>
           <p className="max-w-xs text-sm text-zinc-500">
             Desenvolvedor Full Stack focado em transformar ideias em produtos digitais simples e funcionais.
