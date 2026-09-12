@@ -21,10 +21,10 @@ export const GridBackground = ({
           backgroundImage:
             "linear-gradient(to right, #e4e4e7 1px, transparent 1px), linear-gradient(to bottom, #e4e4e7 1px, transparent 1px)",
           backgroundSize: `${cellWidth}px ${cellHeight}px`,
-          // maskImage:
-          //   "radial-gradient(ellipse 70% 70% at 50% 20%, black 40%, transparent 100%)",
-          // WebkitMaskImage:
-          //    "radial-gradient(ellipse 70% 70% at 50% 20%, black 40%, transparent 100%)",
+          maskImage:
+            "radial-gradient(ellipse 70% 70% at 50% 20%, black 40%, transparent 100%)",
+          WebkitMaskImage:
+             "radial-gradient(ellipse 70% 70% at 50% 35%, black 40%, transparent 100%)",
         }}
       />
       {children}

@@ -1,9 +1,14 @@
 import { BookOpen, Smartphone, Workflow, type LucideIcon } from "lucide-react";
 import { Projects } from "@/lib/projects";
 import imgEstudosDpi from "../../assets/img_estudosDpi.png";
-import imgDevflowCrm from "../../assets/devflow_crm/logo.png";
+import imgDevflowCrm from "../../assets/DevflowCrm/logo.png";
+import {GithubProjects} from "@/lib/github-projects"
 
 const etecJobs = Projects.find((project) => project.linkPageProject === "etec-jobs")!;
+
+export const number_projects = GithubProjects.length
+
+export const years_experience = new Date().getFullYear() - 2024
 
 export interface IFeaturedProject {
   slug: string;

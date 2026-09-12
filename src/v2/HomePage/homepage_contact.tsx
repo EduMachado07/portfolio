@@ -9,7 +9,7 @@ import { Reveal } from "@/components/v2/reveal";
 
 export const ContactSection = () => {
   return (
-    <Reveal className="relative overflow-hidden rounded-2xl bg-zinc-900 px-8 py-16 text-center sm:px-16">
+    <Reveal className="relative overflow-hidden rounded-2xl bg-zinc-900 px-8 py-16 text-center sm:px-16 shadow-lg">
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.07]"
         style={{

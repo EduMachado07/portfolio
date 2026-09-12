@@ -14,7 +14,7 @@ export const ProjectsSection = () => {
             Projetos em destaque
           </p>
           <h2 className="text-3xl font-bold text-zinc-900 sm:text-4xl">
-            Alguns dos meus últimos trabalhos
+            Meus melhores trabalhos
           </h2>
         </div>
 

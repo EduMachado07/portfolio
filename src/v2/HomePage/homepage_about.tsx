@@ -13,6 +13,7 @@ import tamborImg from "@/assets/bateria/img_baquetas.png";
 import { Button } from "@/components/ui/button";
 import { SocialMedia } from "@/lib/socialMedia";
 import { Reveal } from "@/components/v2/reveal";
+import {number_projects, years_experience} from "./homepage_model"
 
 const linkedinLink = SocialMedia["Redes Sociais"].find(
   (item) => item.title === "LinkedIn",
@@ -109,8 +110,7 @@ export const AboutSection = () => {
               <Laptop size={22} />
             </i>
             <div>
-              {/* fazer contagem projetos */}
-              <h4 className="text-xl font-bold">8</h4>
+              <h4 className="text-xl font-bold">{number_projects}</h4>
               <p className="text-xs text-zinc-500">Projetos Desenvolvidos</p>
             </div>
           </section>
@@ -121,7 +121,7 @@ export const AboutSection = () => {
             </i>
             <div>
               {/* fazer calculo anos experiencia (atual - 2024) */}
-              <h4 className="text-xl font-bold">2+</h4>
+              <h4 className="text-xl font-bold">{years_experience}+</h4>
               <p className="text-xs text-zinc-500">Anos de Experiência</p>
             </div>
           </section>

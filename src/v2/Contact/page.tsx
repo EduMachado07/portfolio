@@ -41,7 +41,7 @@ export const ContactPage = () => {
           className="pointer-events-none absolute -bottom-4 -right-10 hidden w-20 rotate-[8deg] object-contain opacity-[0.7] sm:block sm:w-28"
         />
 
-        <span className="flex items-center gap-2 rounded-full bg-zinc-300 px-3 py-1 text-xs font-medium text-zinc-800">
+        <span className="flex items-center gap-2 rounded-md bg-zinc-200 px-3 py-1 text-xs font-medium text-zinc-800">
           <Mail size={14} />
           Contato
         </span>

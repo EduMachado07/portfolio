@@ -85,7 +85,7 @@ export const ProjectsPage = () => {
         </section>
       </GridBackground>
 
-      <main className="mx-auto flex w-full flex-col gap-12 px-[6%] py-16 md:px-[20%]">
+      <main className="bg-zinc-200/50 mx-auto flex w-full flex-col gap-12 px-[6%] py-16 md:px-[20%]">
         <div className="flex flex-col gap-3 sm:flex-row">
           <div className="relative flex-1">
             <Search
@@ -129,8 +129,9 @@ export const ProjectsPage = () => {
               <Reveal
                 key={project.slug}
                 delay={Math.min((index % 2) * 0.12, 0.24)}
+                className="h-full"
               >
-                <article className="group relative flex flex-col gap-4 rounded-md border border-zinc-200 bg-zinc-100 p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <article className="group relative flex h-full min-h-[720px] flex-col gap-4 rounded-md border border-zinc-200 bg-zinc-100 p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg md:min-h-[790px] lg:min-h-[690px]">
                   <span className="absolute -top-2 -left-2 z-10 flex size-13 -rotate-12 items-center justify-center rounded-md border border-zinc-300 bg-zinc-100/80 shadow-md">
                     <img
                       src={BADGE_IMAGES[index % BADGE_IMAGES.length]}
@@ -141,12 +142,23 @@ export const ProjectsPage = () => {
                   </span>
 
                   <div className="overflow-hidden rounded-md border border-zinc-200">
-                    <img
-                      src={project.img}
-                      alt={`Captura de tela do projeto ${project.title}`}
-                      loading="lazy"
-                      className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
+                    {project.img ? (
+                      <img
+                        src={project.img}
+                        alt={`Captura de tela do projeto ${project.title}`}
+                        loading="lazy"
+                        className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <GridBackground cellWidth={42} cellHeight={42} style="transition-transform duration-200 group-hover:scale-105">
+                        <div className="transition-transform duration-500 group-hover:scale-105 flex aspect-video w-full items-center justify-center bg-zinc-400/30 text-zinc-400">
+                          {/* <Layers size={32} /> */}
+                          <h2 className="text-8xl font-semibold text-zinc-400">
+                            EM
+                          </h2>
+                        </div>
+                      </GridBackground>
+                    )}
                   </div>
 
                   <div className="flex flex-wrap items-center gap-2 text-xs font-medium text-zinc-500">
@@ -160,7 +172,7 @@ export const ProjectsPage = () => {
                     {project.title}
                   </h2>
 
-                  <p className="line-clamp-3 text-sm leading-relaxed text-zinc-600">
+                  <p className="line-clamp-5 flex-1 text-sm leading-relaxed text-zinc-600">
                     {project.description}
                   </p>
 
@@ -227,8 +239,8 @@ export const ProjectsPage = () => {
           </div>
         )}
 
-        <Reveal className="overflow-hidden rounded-2xl bg-zinc-800 opacity-10">
-          <GridBackground cellWidth={32} cellHeight={32} style='opacity-10'>
+        <Reveal className="shadow-lg overflow-hidden rounded-2xl bg-zinc-800 opacity-10">
+          <GridBackground cellWidth={32} cellHeight={32} style="opacity-10">
             <section className="relative flex flex-col items-center justify-between gap-6 px-6 py-8 text-center md:flex-row md:px-10 md:text-left">
               <div className="flex flex-col gap-1">
                 <h2 className="text-xl font-bold text-white sm:text-2xl">

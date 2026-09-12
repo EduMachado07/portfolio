@@ -3,6 +3,7 @@ import { Index } from './v2';
 import { HomePage } from './v2/HomePage/page';
 import { ContactPage } from './v2/Contact/page';
 import { ProjectsPage } from './v2/ProjectsPage/page';
+import { AboutPage } from './v2/AboutPage/page';
 // import Layout from './pages/LayoutPage';
 // import Index from './pages/IndexPage';
 // import Projects from './pages/ProjectsPage';
@@ -34,6 +35,7 @@ const router = createBrowserRouter([
         children: [
             { index: true, element: <HomePage /> },
             { path: 'projetos', element: <ProjectsPage /> },
+            { path: 'sobre', element: <AboutPage /> },
             { path: 'contato', element: <ContactPage /> },
             {
                 path: '*',
