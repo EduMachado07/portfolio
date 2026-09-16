@@ -14,12 +14,10 @@ import { Reveal } from "@/components/v2/reveal";
 import imgPerfil from "@/assets/perfil.jpeg";
 import bateriaImg from "@/assets/bateria/img_bateriaCompleta.png";
 import pratoImg from "@/assets/bateria/img_prato.png";
-import tamborImg from "@/assets/bateria/img_tambor.png";
 import baquetasImg from "@/assets/bateria/img_baquetas.png";
 import {
   HERO_BADGES,
   HERO_PARAGRAPHS,
-  HERO_TAGLINE,
   HERO_TITLE,
   MUSIC_SECTION,
   SKILL_CATEGORIES,
@@ -38,13 +36,13 @@ export const AboutPage = () => {
                 <MapPin size={14} />
                 {HERO_BADGES.location}
               </p>
-              <p className="flex items-center gap-1.5 rounded-full border border-zinc-300 px-3 py-1 text-xs font-medium text-zinc-700">
+              <p className="flex items-center gap-1.5 rounded-full border bg-zinc-100 border-zinc-300 px-3 py-1 text-xs font-medium text-zinc-700">
                 <GraduationCap size={14} />
                 {HERO_BADGES.academic}
               </p>
             </div>
 
-            <p className="flex items-center gap-1.5 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
+            {/* <p className="flex items-center gap-1.5 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
               {HERO_TAGLINE}
               <img
                 src={pratoImg}
@@ -52,7 +50,7 @@ export const AboutPage = () => {
                 aria-hidden="true"
                 className="size-6.5 object-contain opacity-70"
               />
-            </p>
+            </p> */}
 
             <h1 className="text-4xl font-bold leading-tight text-zinc-950 sm:text-5xl">
               {HERO_TITLE}
@@ -61,7 +59,7 @@ export const AboutPage = () => {
             {HERO_PARAGRAPHS.map((paragraph) => (
               <p
                 key={paragraph}
-                className="max-w-xl text-base leading-relaxed text-zinc-600 sm:text-lg"
+                className="max-w-2xl text-base leading-relaxed text-zinc-600 sm:text-lg"
               >
                 {paragraph}
               </p>
@@ -89,12 +87,12 @@ export const AboutPage = () => {
               <img
                 src={imgPerfil}
                 alt="Foto de perfil de Eduardo Machado"
-                className="size-64 rounded-2xl object-cover shadow-lg sm:size-80"
+                className="size-64 rounded-2xl object-cover shadow-lg sm:size-86"
               />
 
               <span className="absolute -top-4 -left-4 flex size-12 -rotate-12 items-center justify-center rounded-full border border-zinc-300 bg-white p-2.5 shadow-sm">
                 <img
-                  src={tamborImg}
+                  src={pratoImg}
                   alt=""
                   aria-hidden="true"
                   className="h-full w-full object-contain opacity-70"
@@ -106,21 +104,21 @@ export const AboutPage = () => {
       </GridBackground>
 
       <main className="mx-auto flex w-full flex-col gap-20 px-[6%] py-16 md:px-[15%]">
-        <Reveal className="relative flex flex-col gap-6 overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-900 px-6 py-10 text-center sm:px-12 sm:py-14 md:text-left">
+        <Reveal className="relative flex flex-col gap-6 overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-800 px-6 py-10 text-center sm:px-12 sm:py-14 md:text-left">
           <img
             src={bateriaImg}
             alt=""
             aria-hidden="true"
-            className="pointer-events-none absolute -right-10 -bottom-14 hidden w-72 rotate-[-6deg] object-contain opacity-[0.12] sm:block"
+            className="pointer-events-none absolute -right-10 -bottom-14 hidden w-72 rotate-[-6deg] object-contain opacity-[0.6] invert sm:block"
           />
-          <img
+          {/* <img
             src={baquetasImg}
             alt=""
             aria-hidden="true"
             className="pointer-events-none absolute -top-6 left-10 hidden w-28 rotate-[150deg] object-contain opacity-[0.15] sm:block"
-          />
+          /> */}
 
-          <span className="mx-auto flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-zinc-300 md:mx-0">
+          <span className="w-fit mx-auto flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-zinc-300 md:mx-0">
             <Sparkles size={14} />
             {MUSIC_SECTION.badge}
           </span>
@@ -186,7 +184,7 @@ export const AboutPage = () => {
                       </div>
 
                       <div className="relative mx-auto -rotate-3 sm:mx-0">
-                        <div className="flex size-24 shrink-0 items-center justify-center rounded-md border-2 border-dashed border-zinc-300 bg-white text-zinc-300">
+                        <div className={`flex w-40 h-32 shrink-0 items-center justify-center rounded-md border-2 ${ item.img ? 'border-zinc-300' : 'border-dashed border-zinc-300' } bg-white text-zinc-300`}>
                           {item.img ? (
                             <img
                               src={item.img}
@@ -194,14 +192,14 @@ export const AboutPage = () => {
                               className="h-full w-full rounded-md object-cover"
                             />
                           ) : (
-                            <Camera size={22} />
+                            <Camera size={28} />
                           )}
                         </div>
                         <img
                           src={baquetasImg}
                           alt=""
                           aria-hidden="true"
-                          className="pointer-events-none absolute -top-3 -right-3 w-8 rotate-45 object-contain opacity-60"
+                          className="pointer-events-none absolute -top-4 -right-3 w-9 rotate-45 object-contain opacity-80"
                         />
                       </div>
                     </div>

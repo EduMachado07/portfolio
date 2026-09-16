@@ -21,7 +21,7 @@ const linkedinLink = SocialMedia["Redes Sociais"].find(
 
 export const AboutSection = () => {
   return (
-    <main className="flex flex-col-reverse items-center justify-between gap-16 border-x-2 border-dotted px-6 py-20 lg:flex-row lg:gap-8 lg:pt-28">
+    <main className="flex flex-col-reverse items-center justify-between gap-10 px-6 py-14 sm:py-20 lg:flex-row lg:gap-8 lg:pt-28">
       <Reveal className="flex flex-col items-center gap-5 text-center lg:items-start lg:text-left">
         <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start">
           <p className="bg-zinc-200 flex items-center gap-1.5 px-3 py-1 text-xs font-medium rounded-full">
@@ -44,11 +44,11 @@ export const AboutSection = () => {
           />
         </p>
 
-        <h1 className="text-5xl font-bold leading-tight text-zinc-950 sm:text-6xl">
+        <h1 className="text-4xl font-bold leading-tight text-zinc-950 sm:text-5xl lg:text-6xl">
           Eduardo Machado
         </h1>
 
-        <p className="max-w-md text-base leading-relaxed text-zinc-600 sm:text-lg">
+        <p className="max-w-md text-sm leading-relaxed text-zinc-600 sm:text-base lg:text-lg">
           Transformo ideias em produtos digitais funcionais, do planejamento ao
           deploy. Gosto de resolver problemas reais com código simples, bem
           pensado e que funciona.

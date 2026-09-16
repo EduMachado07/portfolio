@@ -10,6 +10,14 @@ import {
   Wrench,
 } from "lucide-react";
 
+import img_etec from "../../assets/img_Etec.jpg";
+import img_etec_jobs from "../../assets/img_EtecJobs.png";
+import img_fatec from "../../assets/img_Fatec.jpg";
+import img_devflow_grade_horarios_fatec from "../../assets/Fatec/1sem_gradeHorarios/img_logo.png";
+import img_devflow_analytics from "../../assets/DevflowAnalytics/logo.png";
+import img_estudos_dpi from "../../assets/img_estudosDpi.png";
+import img_devflow_crm from "../../assets/DevflowCrm/logo.png";
+
 export const HERO_BADGES = {
   location: "São José dos Campos, SP",
   academic: "Graduando · Fatec Jacareí",
@@ -30,7 +38,7 @@ export const MUSIC_SECTION = {
   title: "Bateria é o meu outro ritmo",
   paragraphs: [
     "Toco bateria há uns 5 anos. Começou assistindo meu irmão mais velho tocar: eu ficava tentando acertar o tempo batucando com as mãos, as pernas e estalos de dedo, até que ele me deu minha única aula de verdade — o resto eu aprendi sozinho, tocando na igreja e estudando drum covers.",
-    "Nunca toquei em uma banda, mas há uns 3 anos toco na IEQ Dom Pedro I — aliás, o nome por trás do meu projeto Estudos DPI. Hoje já me considero um baterista bom, com bastante espaço (e vontade) de melhorar ainda mais.",
+    "Nunca toquei em uma banda, mas há uns 3 anos toco na IEQ Dom Pedro I — aliás, o nome por trás do meu projeto Estudos DPI. Hoje já me considero um baterista bom, com bastante espaço (e vontade) de melhorar ainda mais, assim como na programação.",
   ],
 };
 
@@ -53,17 +61,9 @@ export const TIMELINE: ITimelineItem[] = [
     type: "academic",
     title: "Técnico em Desenvolvimento de Sistemas",
     place: "Etec São José dos Campos",
+    img: img_etec,
     description:
       "Concluí o técnico que me abriu as portas pra programação — da lógica ao primeiro projeto em equipe.",
-  },
-  {
-    id: "fatec-inicio",
-    period: "2025",
-    type: "academic",
-    title: "Início da Fatec Jacareí",
-    place: "Tecnologia em Desenvolvimento de Software Multiplataforma",
-    description:
-      "Comecei a graduação com conclusão prevista para dez/2027, unindo o que aprendo em sala com projetos reais em equipe a cada semestre.",
   },
   {
     id: "etec-jobs",
@@ -71,8 +71,29 @@ export const TIMELINE: ITimelineItem[] = [
     type: "professional",
     title: "1º lugar no hackathon da Etec — Etec Jobs",
     place: "Etec São José dos Campos",
+    img: img_etec_jobs,
     description:
       "Em 7 dias, desenvolvi com React Native um app Android de vagas de emprego, estágio e jovem aprendiz, vencendo entre 5 equipes.",
+  },
+  {
+    id: "fatec-inicio",
+    period: "2025",
+    type: "academic",
+    title: "Início da Fatec Jacareí",
+    place: "Tecnologia em Desenvolvimento de Software Multiplataforma",
+    img: img_fatec,
+    description:
+      "Comecei a graduação com conclusão prevista para dez/2027, unindo o que aprendo em sala com projetos reais em equipe a cada semestre.",
+  },
+  {
+    id: "devflow-grade-horarios-fatec",
+    period: "set/2025",
+    type: "professional",
+    title: "Devflow Grade de Horários — 1º semestre Fatec",
+    place: "Parceria com Furnas, INPE, UFRJ, UFJF e IIE",
+    img: img_devflow_grade_horarios_fatec,
+    description:
+      "Atuei como Scrum Master em uma plataforma full stack para consultar horários de aula e grade de cursos da Fatec Jacareí, substituindo comunicados impressos.",
   },
   {
     id: "devflow-analytics",
@@ -80,6 +101,7 @@ export const TIMELINE: ITimelineItem[] = [
     type: "professional",
     title: "Devflow Analytics — 2º semestre Fatec",
     place: "Parceria com Furnas, INPE, UFRJ, UFJF e IIE",
+    img: img_devflow_analytics,
     description:
       "Ajudei a construir uma plataforma full stack para análise de dados limnológicos e meteorológicos do monitoramento de carbono em reservatórios de hidrelétricas.",
   },
@@ -89,6 +111,7 @@ export const TIMELINE: ITimelineItem[] = [
     type: "professional",
     title: "Estudos DPI em produção",
     place: "Projeto próprio",
+    img: img_estudos_dpi,
     description:
       "Coloquei no ar, sozinho, uma aplicação full stack para organizar estudos bíblicos, com formatação de texto assistida por IA e autenticação JWT completa.",
   },
@@ -98,6 +121,7 @@ export const TIMELINE: ITimelineItem[] = [
     type: "professional",
     title: "DevFlow CRM — 3º semestre Fatec",
     place: "1000 Valle Multimarcas, em parceria com a Fatec Jacareí",
+    img: img_devflow_crm,
     description:
       "Integrei o front-end aos mais de 25 endpoints REST do CRM de uma revenda multi-lojas, dentro de uma equipe Scrum de 6 pessoas.",
   },
@@ -107,8 +131,9 @@ export const TIMELINE: ITimelineItem[] = [
     type: "academic",
     title: "Formatura na Fatec Jacareí",
     place: "Tecnologia em Desenvolvimento de Software Multiplataforma",
+    // img: img_fatec,
     description:
-      "A meta que fecha essa fase: virar Tecnólogo em Desenvolvimento de Software Multiplataforma.",
+      "A meta que fecha uma fase: virar Tecnólogo em Desenvolvimento de Software Multiplataforma.",
   },
 ];
 
@@ -143,16 +168,13 @@ export const SKILL_CATEGORIES: ISkillCategory[] = [
     skills: [
       { name: "React", level: 5 },
       { name: "Tailwind CSS", level: 5 },
-      { name: "shadcn/ui", level: 4 },
-      { name: "Vite", level: 4 },
-      { name: "Axios", level: 4 },
+      { name: "Vite", level: 5 },
+      { name: "Axios", level: 5 },
       { name: "React Native / Expo", level: 3 },
-      { name: "React Query", level: 3 },
-      { name: "Recharts", level: 3 },
-      { name: "Material UI", level: 3 },
-      { name: "Formulários (React Hook Form + Zod)", level: 3 },
-      { name: "Zustand", level: 3 },
-      { name: "Framer Motion", level: 2 },
+      { name: "React Query", level: 4 },
+      { name: "Formulários (React Hook Form + Zod)", level: 4 },
+      { name: "Zustand", level: 4 },
+      { name: "Framer Motion", level: 3 },
     ],
   },
   {
@@ -164,7 +186,7 @@ export const SKILL_CATEGORIES: ISkillCategory[] = [
       { name: "APIs REST", level: 5 },
       { name: "JWT & RBAC", level: 4 },
       { name: "Cloudinary", level: 2 },
-      { name: "FastAPI", level: 1 },
+      { name: "FastAPI", level: 3 },
     ],
   },
   {
@@ -174,8 +196,8 @@ export const SKILL_CATEGORIES: ISkillCategory[] = [
       { name: "PostgreSQL", level: 4 },
       { name: "Prisma ORM", level: 4 },
       { name: "SQL", level: 4 },
+      { name: "NoSQL", level: 4 },
       { name: "SQLite", level: 3 },
-      { name: "NoSQL", level: 2 },
     ],
   },
   {
@@ -184,7 +206,6 @@ export const SKILL_CATEGORIES: ISkillCategory[] = [
     skills: [
       { name: "Git & GitHub", level: 5 },
       { name: "Docker", level: 4 },
-      { name: "Deploy (Vercel)", level: 4 },
       { name: "Docker Compose", level: 3 },
       { name: "Swagger", level: 3 },
       { name: "Scrum", level: 3 },
@@ -204,8 +225,8 @@ export const SKILL_CATEGORIES: ISkillCategory[] = [
     title: "IA & Automação",
     icon: Sparkles,
     skills: [
+      { name: "Integração com LLMs", level: 4 },
       { name: "n8n", level: 3 },
-      { name: "Integração com LLMs (Groq)", level: 3 },
       { name: "Prompt Engineering", level: 3 },
       { name: "Machine Learning (scikit-learn, PyTorch, Faiss)", level: 1 },
     ],

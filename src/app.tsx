@@ -4,6 +4,13 @@ import { HomePage } from './v2/HomePage/page';
 import { ContactPage } from './v2/Contact/page';
 import { ProjectsPage } from './v2/ProjectsPage/page';
 import { AboutPage } from './v2/AboutPage/page';
+import { EstudosDpiPage } from './v2/ProjectDetail/EstudosDpi/page';
+import { EtecJobsPage } from './v2/ProjectDetail/EtecJobs/page';
+import { DevflowCrmPage } from './v2/ProjectDetail/DevflowCrm/page';
+import { SmartEmailAgentPage } from './v2/ProjectDetail/SmartEmailAgent/page';
+import { DevflowAnalyticsPage } from './v2/ProjectDetail/DevflowAnalytics/page';
+import { GradeHorariosPage } from './v2/ProjectDetail/GradeHorarios/page';
+import { FinXPage } from './v2/ProjectDetail/FinX/page';
 // import Layout from './pages/LayoutPage';
 // import Index from './pages/IndexPage';
 // import Projects from './pages/ProjectsPage';
@@ -35,6 +42,13 @@ const router = createBrowserRouter([
         children: [
             { index: true, element: <HomePage /> },
             { path: 'projetos', element: <ProjectsPage /> },
+            { path: 'projetos/estudos-dpi', element: <EstudosDpiPage /> },
+            { path: 'projetos/etec-jobs', element: <EtecJobsPage /> },
+            { path: 'projetos/devflow', element: <DevflowCrmPage /> },
+            { path: 'projetos/smart-email-agent', element: <SmartEmailAgentPage /> },
+            { path: 'projetos/devflow-analytics', element: <DevflowAnalyticsPage /> },
+            { path: 'projetos/fatec-1sem', element: <GradeHorariosPage /> },
+            { path: 'projetos/fin-x', element: <FinXPage /> },
             { path: 'sobre', element: <AboutPage /> },
             { path: 'contato', element: <ContactPage /> },
             {

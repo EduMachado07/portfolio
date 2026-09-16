@@ -4,6 +4,7 @@ import img_fatec_1sem from "@/assets/Fatec/1sem_gradeHorarios/img_logo.png";
 import img_estudosDpi from "@/assets/img_estudosDpi.png";
 import img_devflowCrm from "@/assets/DevflowCrm/logo.png";
 import img_smartAgent from "@/assets/SmartEmailAgent/img_logo.png";
+import img_devflow_analytics from "@/assets/DevflowAnalytics/logo.png";
 
 export type ProjectSystemType =
   | "Frontend"
@@ -163,6 +164,7 @@ export const GithubProjects: IGithubProject[] = [
     description:
       "Plataforma web para centralizar, visualizar e analisar dados limnológicos e meteorológicos do monitoramento de balanço de carbono em reservatórios de hidrelétricas da Furnas Centrais Elétricas, em parceria com o INPE, UFRJ, UFJF e IIE. Reúne dashboards interativos, tabelas dinâmicas, mapa dos pontos de coleta e gráficos de séries temporais.",
     repoUrl: "https://github.com/prjDevflow/prj_2dsm",
+    img: img_devflow_analytics,
     technologies: [
       "React",
       "TypeScript",

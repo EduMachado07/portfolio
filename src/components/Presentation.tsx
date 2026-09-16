@@ -85,8 +85,8 @@ const Presentation = () => {
                     <a href={item.link} target="_blank">
                       <Button
                         key={index}
-                        variant="nothing"
-                        size="social"
+                        variant="ghost"
+                        size="default"
                         className="flex items-center gap-2 text-zinc-900 dark:text-zinc-50 border-2 border-zinc-600 dark:border-zinc-400 rounded-md py-2.5 px-4 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md hover:shadow-zinc-300 dark:hover:shadow-zinc-700"
                       >
                         <Icon size={20} />

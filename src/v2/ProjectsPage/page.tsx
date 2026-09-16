@@ -37,42 +37,42 @@ export const ProjectsPage = () => {
   return (
     <div className="bg-zinc-100/50">
       <GridBackground cellWidth={48} cellHeight={48}>
-        <section className="relative flex flex-col items-center gap-6 overflow-hidden px-[6%] py-20 text-center md:px-[28%] md:py-28">
+        <section className="relative flex flex-col items-center gap-5 overflow-hidden px-[6%] py-16 text-center sm:gap-6 sm:py-20 md:px-[28%] md:py-28">
           <img
             src={baquetasImg}
             alt=""
             aria-hidden="true"
-            className="pointer-events-none absolute -top-4 left-32 hidden w-44 rotate-[160deg] object-contain opacity-[0.25] sm:block sm:w-36"
+            className="pointer-events-none absolute -top-2 left-6 w-12 rotate-[160deg] object-contain opacity-[0.18] sm:top-[-1rem] sm:left-32 sm:w-36 sm:opacity-[0.25]"
           />
           <img
             src={bateriaImg}
             alt=""
             aria-hidden="true"
-            className="pointer-events-none absolute -bottom-10 -left-10 hidden w-48 rotate-[-6deg] object-contain opacity-[0.25] sm:block sm:w-64"
+            className="pointer-events-none absolute -bottom-4 -left-4 w-16 rotate-[-6deg] object-contain opacity-[0.18] sm:-bottom-10 sm:-left-10 sm:w-64 sm:opacity-[0.25]"
           />
           <img
             src={pratoImg}
             alt=""
             aria-hidden="true"
-            className="pointer-events-none absolute -top-6 -right-4 hidden w-28 rotate-6 object-contain opacity-[0.25] sm:block sm:w-36"
+            className="pointer-events-none absolute -top-2 -right-2 w-10 rotate-6 object-contain opacity-[0.15] sm:-top-6 sm:-right-4 sm:w-36 sm:opacity-[0.25]"
           />
           <img
             src={tamborImg}
             alt=""
             aria-hidden="true"
-            className="pointer-events-none absolute -bottom-4 -right-10 hidden w-20 rotate-[8deg] object-contain opacity-[0.25] sm:block sm:w-28"
+            className="pointer-events-none absolute -bottom-2 -right-3 w-8 rotate-[8deg] object-contain opacity-[0.18] sm:-bottom-4 sm:-right-10 sm:w-28 sm:opacity-[0.25]"
           />
 
-          <span className="flex items-center gap-2 rounded-md bg-zinc-200 px-3 py-1 text-xs font-medium text-zinc-600">
+          <span className="relative flex items-center gap-2 rounded-md bg-zinc-200 px-3 py-1 text-xs font-medium text-zinc-600">
             <Sparkles size={14} />
             Portfólio
           </span>
 
-          <h1 className="text-left text-4xl font-bold leading-tight text-zinc-950 sm:text-5xl">
+          <h1 className="relative text-3xl font-bold leading-tight text-zinc-950 sm:text-4xl md:text-5xl">
             Projetos que saíram do papel
           </h1>
 
-          <p className="text-base leading-relaxed text-zinc-600 sm:text-lg">
+          <p className="relative text-sm leading-relaxed text-zinc-600 sm:text-base md:text-lg">
             Aqui estão os sistemas que carreguei do papel até a produção — cada
             um com o problema que resolvi, as decisões técnicas por trás e o
             resultado final. Se você programa, vai curtir ver o processo.
@@ -131,7 +131,7 @@ export const ProjectsPage = () => {
                 delay={Math.min((index % 2) * 0.12, 0.24)}
                 className="h-full"
               >
-                <article className="group relative flex h-full min-h-[720px] flex-col gap-4 rounded-md border border-zinc-200 bg-zinc-100 p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg md:min-h-[790px] lg:min-h-[690px]">
+                <article className="group relative flex h-full flex-col gap-4 rounded-md border border-zinc-200 bg-zinc-100 p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg md:min-h-[790px] lg:min-h-[690px]">
                   <span className="absolute -top-2 -left-2 z-10 flex size-13 -rotate-12 items-center justify-center rounded-md border border-zinc-300 bg-zinc-100/80 shadow-md">
                     <img
                       src={BADGE_IMAGES[index % BADGE_IMAGES.length]}

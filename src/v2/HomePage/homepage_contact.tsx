@@ -23,25 +23,25 @@ export const ContactSection = () => {
         src={baquetasImg}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute -top-4 left-32 hidden w-44 rotate-[160deg] object-contain opacity-[0.25] invert sm:block sm:w-26"
+        className="pointer-events-none absolute -top-2 left-8 w-12 rotate-[160deg] object-contain opacity-[0.18] invert sm:top-[-1rem] sm:left-32 sm:w-26 sm:opacity-[0.25]"
       />
       <img
         src={bateriaImg}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-6 -left-2 hidden w-44 rotate-[-6deg] object-contain opacity-[0.25] invert sm:block sm:w-56"
+        className="pointer-events-none absolute -bottom-3 -left-2 w-14 rotate-[-6deg] object-contain opacity-[0.18] invert sm:-bottom-6 sm:w-56 sm:opacity-[0.25]"
       />
       <img
         src={pratoImg}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute -top-6 right-8 hidden w-28 rotate-6 object-contain opacity-[0.25] invert sm:block sm:w-36"
+        className="pointer-events-none absolute -top-3 right-4 w-9 rotate-6 object-contain opacity-[0.15] invert sm:-top-6 sm:right-8 sm:w-36 sm:opacity-[0.25]"
       />
       <img
         src={tamborImg}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-4 -right-6 hidden w-20 rotate-[8deg] object-contain opacity-[0.25] invert sm:block sm:w-28"
+        className="pointer-events-none absolute -bottom-2 -right-3 w-7 rotate-[8deg] object-contain opacity-[0.18] invert sm:-bottom-4 sm:-right-6 sm:w-28 sm:opacity-[0.25]"
       />
 
       <div className="relative flex flex-col items-center gap-4">

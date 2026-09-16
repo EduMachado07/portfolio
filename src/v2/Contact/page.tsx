@@ -15,49 +15,49 @@ export const ContactPage = () => {
 
   return (
     <GridBackground cellWidth={58} cellHeight={58}>
-      <main className="h-[75dvh] relative flex flex-col items-center gap-8 overflow-hidden px-[6%] py-24 text-center md:px-[22%] md:py-32">
+      <main className="relative flex flex-col items-center gap-6 overflow-hidden px-[6%] py-20 text-center sm:gap-8 md:h-[75dvh] md:px-[22%] md:py-32">
         <img
           src={baquetasImg}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute -top-4 left-32 hidden w-44 rotate-[160deg] object-contain opacity-[0.7] sm:block sm:w-36"
+          className="pointer-events-none absolute -top-2 left-6 w-12 rotate-[160deg] object-contain opacity-[0.5] sm:left-32 sm:w-36 sm:opacity-[0.7]"
         />
         <img
           src={bateriaImg}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute -bottom-10 -left-10 hidden w-48 rotate-[-6deg] object-contain opacity-[0.7] sm:block sm:w-64"
+          className="pointer-events-none absolute -bottom-4 -left-4 w-16 rotate-[-6deg] object-contain opacity-[0.5] sm:-bottom-10 sm:-left-10 sm:w-64 sm:opacity-[0.7]"
         />
         <img
           src={pratoImg}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute -top-6 -right-4 hidden w-28 rotate-6 object-contain opacity-[0.6] sm:block sm:w-36"
+          className="pointer-events-none absolute -top-3 -right-2 w-10 rotate-6 object-contain opacity-[0.4] sm:-top-6 sm:-right-4 sm:w-36 sm:opacity-[0.6]"
         />
         <img
           src={tamborImg}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute -bottom-4 -right-10 hidden w-20 rotate-[8deg] object-contain opacity-[0.7] sm:block sm:w-28"
+          className="pointer-events-none absolute -bottom-2 -right-4 w-8 rotate-[8deg] object-contain opacity-[0.5] sm:-bottom-4 sm:-right-10 sm:w-28 sm:opacity-[0.7]"
         />
 
-        <span className="flex items-center gap-2 rounded-md bg-zinc-200 px-3 py-1 text-xs font-medium text-zinc-800">
+        <span className="relative flex items-center gap-2 rounded-md bg-zinc-200 px-3 py-1 text-xs font-medium text-zinc-800">
           <Mail size={14} />
           Contato
         </span>
 
-        <h1 className="max-w-2xl text-4xl font-bold leading-tight text-zinc-950 sm:text-5xl">
+        <h1 className="relative max-w-2xl text-3xl font-bold leading-tight text-zinc-950 sm:text-4xl md:text-5xl">
           Vamos conversar?
         </h1>
 
-        <p className="max-w-xl text-base leading-relaxed text-zinc-600 sm:text-lg">
+        <p className="relative max-w-xl text-sm leading-relaxed text-zinc-600 sm:text-base md:text-lg">
           {CONTACT_MESSAGE}
         </p>
 
-        <div className="z-40 mt-4 flex items-center gap-2 rounded-2xl border border-zinc-300 bg-white pr-2 pl-6 py-2 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md">
+        <div className="relative z-40 mt-2 flex w-full max-w-full items-center gap-2 rounded-2xl border border-zinc-300 bg-white py-2 pr-2 pl-4 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md sm:mt-4 sm:w-auto sm:pl-6">
           <a
             href={`mailto:${CONTACT_EMAIL}`}
-            className="flex items-center gap-3 text-lg font-semibold text-zinc-950 sm:text-xl"
+            className="flex min-w-0 items-center gap-2 text-sm font-semibold break-all text-zinc-950 sm:gap-3 sm:text-xl"
           >
             <Mail size={20} className="shrink-0 text-zinc-400" />
             {CONTACT_EMAIL}
