@@ -10,7 +10,7 @@ interface IProjects {
   linkPageProject: string;
   linkGithub: string;
   systemType: "Frontend" | "Backend" | "Full Stack" | "Landing Page";
-  technologies: ("JavaScript" | "TypeScript" | "React Native" | "Node.js" | "HTML")[];
+  technologies: ("JavaScript" | "TypeScript" | "React Native" | "Node.js" | "HTML" | "Expo")[];
   purpose: "Pessoal" | "Escolar" | "Cliente";
   year: number
 }
@@ -37,7 +37,7 @@ export const Projects: IProjects[] = [
     year: 2024,
     systemType: 'Frontend',
     purpose: 'Escolar',
-    technologies: ['React Native'],
+    technologies: ['React Native', 'Expo'],
     linkGithub: 'https://github.com/EduMachado07/etecJobs'
   },
   {
