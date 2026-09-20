@@ -1,6 +1,6 @@
 import { File, Instagram, Linkedin, Github } from "lucide-react";
 import type { ElementType } from "react";
-import curriculo from '/myCurriculo.pdf'
+import curriculo from '../../../public/Curriculo_Final.pdf'
 
 interface ISocialItem {
   title: string;
