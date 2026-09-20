@@ -2,6 +2,7 @@ import {
   ArrowRight,
   Briefcase,
   Camera,
+  FileText,
   GraduationCap,
   Mail,
   MapPin,
@@ -79,6 +80,13 @@ export const AboutPage = () => {
                   Falar comigo
                 </Button>
               </Link>
+
+              <a href="/Curriculo_Final.pdf" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="gap-2 border-zinc-300">
+                  <FileText size={16} />
+                  Ver Currículo
+                </Button>
+              </a>
             </div>
           </Reveal>
 
