@@ -82,7 +82,7 @@ export const AboutSection = () => {
             className="rounded-2xl shadow-lg aspect-square object-cover size-56 sm:size-72 lg:size-84"
           />
 
-          <span className="font-medium absolute -bottom-3 -right-3 flex items-center justify-center gap-1.5 whitespace-nowrap rounded-lg border bg-zinc-50 border-zinc-300 px-3 py-2 text-[10px] text-zinc-950 sm:-bottom-5 sm:-right-5 sm:gap-2 sm:p-5 sm:text-xs">
+          <span className="font-medium absolute -bottom-3 -right-3 flex items-center justify-center gap-1.5 whitespace-nowrap rounded-lg border bg-zinc-50 border-green-300 px-3 py-2 text-[10px] text-zinc-950 sm:-bottom-5 sm:-right-5 sm:gap-2 sm:p-5 sm:text-xs shadow-lg shadow-green-600/20">
             {/* <Mail size={14} /> */}
             Disponível para novos projetos
             <span className="size-2 rounded-full bg-green-600 animate-pulse sm:size-2.5" />
