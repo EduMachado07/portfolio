@@ -13,6 +13,7 @@ import { GradeHorariosPage } from './ProjectDetail/GradeHorarios/page';
 import { FinXPage } from './ProjectDetail/FinX/page';
 import { NodeServerTemplatePage } from './ProjectDetail/NodeServerTemplate/page';
 import { RecommendationSystemPage } from './ProjectDetail/RecommendationSystem/page';
+import { PassePage } from './ProjectDetail/Passe/page';
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
             { path: 'projetos/fin-x', element: <FinXPage /> },
             { path: 'projetos/node-server-template', element: <NodeServerTemplatePage /> },
             { path: 'projetos/recommendation-system', element: <RecommendationSystemPage /> },
+            { path: 'projetos/passe', element: <PassePage /> },
             { path: 'sobre', element: <AboutPage /> },
             { path: 'contato', element: <ContactPage /> },
             {

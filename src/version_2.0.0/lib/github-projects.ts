@@ -5,6 +5,7 @@ import img_estudosDpi from "@/assets/img_estudosDpi.png";
 import img_devflowCrm from "@/assets/DevflowCrm/logo.png";
 import img_smartAgent from "@/assets/SmartEmailAgent/img_logo.png";
 import img_devflow_analytics from "@/assets/DevflowAnalytics/logo.png";
+import img_passe from "@/assets/Passe/capa.webp";
 
 export type ProjectSystemType =
   | "Frontend"
@@ -37,6 +38,37 @@ export interface IGithubProject {
 }
 
 export const GithubProjects: IGithubProject[] = [
+  {
+    slug: "passe",
+    title: "Passe",
+    description:
+      "Sistema integrado de controle de acesso para edifícios e condomínios: a pessoa passa pela catraca lendo com o celular o QR Code do terminal, ou aproximando uma tag NFC, sem cartão e sem porteiro. API, app mobile e terminal IoT feitos por uma equipe de quatro pessoas na ABP da Fatec Jacareí.",
+    img: img_passe,
+    repoUrl: "https://github.com/prjDevflow/prj_4dsm",
+    technologies: [
+      "Node.js",
+      "TypeScript",
+      "Express",
+      "Prisma",
+      "PostgreSQL",
+      "React Native",
+      "Expo",
+      "ESP32",
+      "Docker",
+      "Azure",
+    ],
+    systemType: "Full Stack",
+    purpose: "Faculdade",
+    status: "Em andamento",
+    createdAt: "2026-10-01",
+    year: 2026,
+    highlights: [
+      "QR Code de uso único, trocado a cada 10 s",
+      "Acesso por QR Code ou tag NFC",
+      "API, app mobile e terminal ESP32 integrados",
+      "CI/CD com deploy no Azure",
+    ],
+  },
   {
     slug: "fin-x",
     title: "Fin X",
