@@ -28,7 +28,6 @@ import {
   project,
   REQUIREMENT_GROUPS,
   SECTION_IDS,
-  STATUS,
   SWAGGER_SHOTS,
   TEAM,
   WORKFLOW,
@@ -455,16 +454,11 @@ export const PassePage = () => {
             </div>
 
             <h3 className="mb-4 mt-10 text-xs font-semibold uppercase tracking-widest text-zinc-400">Marcos</h3>
-            <ol className="grid grid-cols-1 gap-3 sm:grid-cols-4">
+            <ol className="grid grid-cols-1 gap-3 sm:grid-cols-3">
               {MILESTONES.map((milestone) => (
-                <li
-                  key={milestone.title}
-                  className={`rounded-lg border p-4 ${
-                    milestone.done ? "border-zinc-200 bg-white/60" : "border-dashed border-zinc-300"
-                  }`}
-                >
+                <li key={milestone.title} className="rounded-lg border border-zinc-200 bg-white/60 p-4">
                   <p className="flex items-center gap-1.5 font-mono text-xs text-zinc-500">
-                    {milestone.done && <Check size={13} className="text-zinc-900" />}
+                    <Check size={13} className="text-zinc-900" />
                     {milestone.date}
                   </p>
                   <p className="mt-1 font-semibold text-zinc-950">{milestone.title}</p>
@@ -494,32 +488,6 @@ export const PassePage = () => {
             </ul>
           </Section>
 
-          <Section id="estado" eyebrow="Processo" title="Onde estamos">
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <div className="rounded-lg border border-zinc-200 bg-white/60 p-5">
-                <h3 className="mb-3 font-semibold text-zinc-950">Já funciona</h3>
-                <ul className="flex flex-col gap-2">
-                  {STATUS.done.map((item) => (
-                    <li key={item} className="flex gap-2 text-sm leading-relaxed text-zinc-600">
-                      <Check size={16} className="mt-0.5 shrink-0 text-zinc-900" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="rounded-lg border border-dashed border-zinc-300 p-5">
-                <h3 className="mb-3 font-semibold text-zinc-950">Próximos passos</h3>
-                <ul className="flex flex-col gap-2">
-                  {STATUS.next.map((item) => (
-                    <li key={item} className="flex gap-2 text-sm leading-relaxed text-zinc-600">
-                      <ArrowRight size={16} className="mt-0.5 shrink-0 text-zinc-400" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </Section>
 
           <Reveal className="overflow-hidden rounded-lg bg-zinc-900">
             <GridBackground cellWidth={32} cellHeight={32} style="opacity-10">

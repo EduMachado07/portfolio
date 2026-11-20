@@ -59,7 +59,7 @@ export const GithubProjects: IGithubProject[] = [
     ],
     systemType: "Full Stack",
     purpose: "Faculdade",
-    status: "Em andamento",
+    status: "Concluído",
     createdAt: "2026-10-01",
     year: 2026,
     highlights: [

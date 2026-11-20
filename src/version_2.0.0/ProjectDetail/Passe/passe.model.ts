@@ -82,7 +82,6 @@ export const NAV_GROUPS: INavGroup[] = [
     sections: [
       { id: "forma-de-trabalho", label: "Forma de trabalho" },
       { id: "equipe", label: "Equipe" },
-      { id: "estado", label: "Onde estamos" },
     ],
   },
 ];
@@ -462,11 +461,10 @@ export const WORKFLOW: { icon: LucideIcon; title: string; description: string }[
   },
 ];
 
-export const MILESTONES: { date: string; title: string; description: string; done: boolean }[] = [
-  { date: "21/10", title: "Review 1", description: "Esqueleto andante: projeto, banco, CI e autenticação.", done: true },
-  { date: "11/11", title: "Review 2", description: "Acesso por QR Code de ponta a ponta: terminal, app e API.", done: true },
-  { date: "17/11", title: "API no ar", description: "Primeiro deploy verde no Azure, com CD a cada merge.", done: true },
-  { date: "25/11", title: "Review 3", description: "NFC, histórico, eventos offline e segurança.", done: false },
+export const MILESTONES: { date: string; title: string; description: string }[] = [
+  { date: "21/10", title: "Review 1", description: "Esqueleto andante: projeto, banco, CI e autenticação." },
+  { date: "11/11", title: "Review 2", description: "Acesso por QR Code de ponta a ponta: terminal, app e API." },
+  { date: "17/11", title: "API no ar", description: "Primeiro deploy verde no Azure, com CD a cada merge." },
 ];
 
 export interface ITeamMember {
@@ -503,15 +501,4 @@ export const TEAM: ITeamMember[] = [
   },
 ];
 
-export const STATUS = {
-  done: [
-    "API em homologação no Azure desde 17/11, com deploy automático",
-    "App para Android publicado em .apk (versão 0.1.0)",
-    "Terminal mostrando o QR, lendo tags NFC e abrindo a catraca",
-  ],
-  next: [
-    "GPS, fila offline e HTTPS no terminal",
-    "Review 3 em 25/11 e apresentação final",
-  ],
-};
 
