@@ -39,6 +39,8 @@ import imgNovaAutorizacao from "@/assets/Passe/t24-nova-autorizacao.webp";
 import imgHistoricoAdmin from "@/assets/Passe/historico-admin.webp";
 import imgSwaggerVisao from "@/assets/Passe/swagger-visao-geral.webp";
 import imgSwaggerQr from "@/assets/Passe/swagger-validar-qr.webp";
+import qrApk from "@/assets/Passe/qr-apk.svg";
+import qrExpoGo from "@/assets/Passe/qr-expo-go.svg";
 
 export const project = GithubProjects.find((item) => item.slug === "passe")!;
 
@@ -97,7 +99,36 @@ export const LINKS = {
   swagger: "https://api-acesso.blackfield-72312729.chilecentral.azurecontainerapps.io/docs",
   figma: "https://www.figma.com/design/jUGhuGVhlFvUe2cZlxgdja/Passe",
   apk: "https://drive.google.com/file/d/1M1OytRAJl5BhUIH2k1wB6q3Zz4Szizgz/view?usp=sharing",
+  expoGo: "https://expo.dev/go",
 };
+
+export interface IAppDownload {
+  title: string;
+  platform: string;
+  description: string;
+  qr: string;
+  href: string;
+  cta: string;
+}
+
+export const APP_DOWNLOADS: IAppDownload[] = [
+  {
+    title: "App para Android (.apk)",
+    platform: "Android",
+    description: "Aponte a câmera do celular para o QR Code e baixe o .apk do Passe (versão 0.1.0, 117 MB). O Android avisa que o app não vem da Play Store: permita a instalação.",
+    qr: qrApk,
+    href: LINKS.apk,
+    cta: "Baixar o .apk",
+  },
+  {
+    title: "Expo Go (Android e iPhone)",
+    platform: "Android e iOS",
+    description: "O .apk não instala no iPhone. No iPhone, instale o Expo Go pela App Store e abra o projeto com o Expo Go, como explica o README do app.",
+    qr: qrExpoGo,
+    href: LINKS.expoGo,
+    cta: "Baixar o Expo Go",
+  },
+];
 
 export const HERO_STATS: { value: string; label: string }[] = [
   { value: "3", label: "sistemas integrados: API, app e terminal" },

@@ -1,6 +1,6 @@
 import { useEffect, type ReactNode } from "react";
 import { Link } from "react-router";
-import { ArrowLeft, ArrowRight, Check, Download, Figma, FileCode2, Github, Nfc, Workflow } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Download, Figma, FileCode2, Github, Nfc, Smartphone, Workflow } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GridBackground } from "@/components/grid-background";
 import { Reveal } from "@/components/reveal";
@@ -12,6 +12,7 @@ import { AccessSequence, SystemDiagram } from "./diagrams";
 import {
   ACCESS_SEQUENCE,
   APP,
+  APP_DOWNLOADS,
   BACKEND,
   CHALLENGE,
   DECISIONS,
@@ -121,6 +122,56 @@ const EngineeringPart = ({ part, children }: { part: IEngineeringPart; children?
   );
 };
 
+const AppDownloads = () => (
+  <section
+    aria-labelledby="experimente-o-app"
+    className="relative mt-10 rounded-xl bg-zinc-950 p-6 text-white shadow-lg sm:p-8"
+  >
+    <div className="flex items-center gap-3">
+      <span className="flex size-10 items-center justify-center rounded-md bg-white/10">
+        <Smartphone size={18} />
+      </span>
+      <div>
+        <p className="text-xs font-semibold uppercase tracking-widest text-zinc-400">Experimente o app</p>
+        <h2 id="experimente-o-app" className="text-xl font-bold sm:text-2xl">
+          Leia o QR Code com o celular
+        </h2>
+      </div>
+    </div>
+
+    <ul className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+      {APP_DOWNLOADS.map((item) => (
+        <li key={item.title} className="flex flex-col gap-5 rounded-lg border border-white/10 bg-white/5 p-5 sm:flex-row sm:items-center">
+          <a
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 self-center rounded-lg bg-white p-3 sm:self-auto"
+          >
+            <img src={item.qr} alt={`QR Code: ${item.cta}`} className="size-36 sm:size-32" />
+          </a>
+          <div className="flex flex-col gap-2">
+            <span className="w-fit rounded-md border border-white/15 px-2 py-0.5 text-xs font-medium text-zinc-300">
+              {item.platform}
+            </span>
+            <h3 className="font-semibold">{item.title}</h3>
+            <p className="text-sm leading-relaxed text-zinc-400">{item.description}</p>
+            <a
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-1 inline-flex w-fit items-center gap-1.5 text-sm font-medium text-white underline-offset-4 hover:underline"
+            >
+              <Download size={14} />
+              {item.cta}
+            </a>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </section>
+);
+
 export const PassePage = () => {
   const activeId = useActiveSection(SECTION_IDS);
 
@@ -189,6 +240,8 @@ export const PassePage = () => {
               </Button>
             </a>
           </div>
+
+          <AppDownloads />
 
           <dl className="relative mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
             {HERO_STATS.map((stat) => (
